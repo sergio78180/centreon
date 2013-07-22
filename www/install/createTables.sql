@@ -490,6 +490,7 @@ CREATE TABLE `cfg_nagios` (
   `temp_path` varchar(255) DEFAULT NULL,
   `status_file` varchar(255) DEFAULT NULL,
   `check_result_path` varchar(255) DEFAULT NULL,
+  `use_check_result_path` enum('0','1') DEFAULT '0',
   `max_check_result_file_age` varchar(255) DEFAULT NULL,
   `p1_file` varchar(255) DEFAULT NULL,
   `status_update_interval` int(11) DEFAULT NULL,
