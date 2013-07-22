@@ -19,5 +19,8 @@ INSERT INTO `cb_type_field_relation` (`cb_type_id`, `cb_field_id`, `is_required`
 (13, 44, 1, 5),
 (13, 45, 1, 6);
 
+-- Ticket #3765
+ALTER TABLE `cfg_centreonbroker` ADD COLUMN `config_write_timestamp` enum('0','1') DEFAULT '1' AFTER `config_filename`;
+
 -- Change version of Centreon
 UPDATE `informations` SET `value` = '2.4.5' WHERE CONVERT( `informations`.`key` USING utf8 )  = 'version' AND CONVERT ( `informations`.`value` USING utf8 ) = '2.4.4' LIMIT 1;
