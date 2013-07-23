@@ -60,22 +60,6 @@
 		}
 	}
     
-    
-    /*
-	 * Get insert_data state
-	 */
-	$DBRESULT2 = $pearDB->query("SELECT * FROM `options` WHERE `key` = 'index_data'");
-	while ($data = $DBRESULT2->fetchRow()) {
-		if (isset($data['value']) && $data['key'] == "index_data") {
-            if ($data['value'] == "1") {
-                $gopt["insert_in_index_data"] = "0";
-            } elseif ($data['value'] == "0") {
-                $gopt["insert_in_index_data"] = "1";
-            } else {
-                $gopt["insert_in_index_data"] = "1";
-            }
-		}
-	}
 
 	/*
 	 * Format of text input
