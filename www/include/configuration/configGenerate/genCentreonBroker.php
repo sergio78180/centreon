@@ -107,7 +107,7 @@
 	        }
 	        $files[$filename][$row['config_group']][$row['config_group_id']][$row['config_key']] = $row['config_value'];
             $eventQueueMaxSize[$filename] = $row['event_queue_max_size'];
-            $withTimestamp[$filename] = $row['config_write_timestamp'];
+            $logTimestamp[$filename] = $row['config_write_timestamp'];
 	    }
 
 	    /*
@@ -150,8 +150,8 @@
                 $fileXml->writeElement('event_queue_max_size', $eventQueueMaxSize[$filename]);
             }
             
-            if (isset($withTimestamp[$filename])) {
-                $fileXml->writeElement('with_timestamp', $withTimestamp[$filename]);
+            if (isset($logTimestamp[$filename])) {
+                $fileXml->writeElement('log_timestamp', $logTimestamp[$filename]);
             }
             
     	    foreach ($groups as $group => $listInfos) {
