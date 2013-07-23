@@ -1,3 +1,4 @@
+ALTER TABLE `index_data` ADD COLUMN `rrd_retention` INT(11) DEFAULT NULL AFTER `to_delete`;
 
 -- Add warn low
 ALTER TABLE `metrics` ADD COLUMN `warn_low` float DEFAULT NULL AFTER `warn`;
