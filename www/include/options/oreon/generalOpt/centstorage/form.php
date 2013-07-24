@@ -59,6 +59,7 @@
 			$gopt["enable_centstorage"] = $data['value'];
 		}
 	}
+    
 
 	/*
 	 * Format of text input
@@ -83,6 +84,7 @@
 	 * Header information
 	 */
 	$form->addElement('header', 'enable', _("Engine Status"));
+    $form->addElement('header', 'insert', _("Resources storage"));
 	$form->addElement('header', 'folder', _("Storage folders"));
 	$form->addElement('header', 'retention', _("Retention durations"));
 	$form->addElement('header', 'Purge', _("Purge options"));
@@ -97,6 +99,7 @@
 	 * inputs declaration
 	 */
 	$form->addElement('checkbox', 'enable_centstorage', _("Enable Centstorage Engine (require restart of centstorage)"));
+    $form->addElement('checkbox', 'insert_in_index_data', _("Enable resources's insertion in index_data by Centreon"));
 	$form->addElement('text', 'RRDdatabase_path', _("Path to RRDTool Database For Metrics"), $attrsText);
 	$form->addElement('text', 'RRDdatabase_status_path', _("Path to RRDTool Database For Status"), $attrsText);
 	$form->addElement('text', 'RRDdatabase_nagios_stats_path', _("Path to RRDTool Database For Monitoring Engine Statistics"), $attrsText);

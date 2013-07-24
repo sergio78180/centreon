@@ -87,6 +87,16 @@ $form->addElement('text', 'name', _("Name"), $attrsText);
 $form->addElement('text', 'filename', _("Config file name"), $attrsText);
 $form->addElement('select', 'ns_nagios_server', _("Requester"), $nagios_servers);
 $form->addElement('text', 'event_queue_max_size', _('Event queue max size'), $attrsText);
+
+$timestamp = array();
+$timestamp[] = HTML_QuickForm::createElement('radio', 'write_timestamp', null, _("Yes"), 1);
+$timestamp[] = HTML_QuickForm::createElement('radio', 'write_timestamp', null, _("No"), 0);
+$form->addGroup($timestamp, 'write_timestamp', _("Write timestamp"), '&nbsp;');
+
+$thread_id = array();
+$thread_id[] = HTML_QuickForm::createElement('radio', 'write_thread_id', null, _("Yes"), 1);
+$thread_id[] = HTML_QuickForm::createElement('radio', 'write_thread_id', null, _("No"), 0);
+$form->addGroup($thread_id, 'write_thread_id', _("Write thread id"), '&nbsp;');
     
 $status = array();
 $status[] = HTML_QuickForm::createElement('radio', 'activate', null, _("Enabled"), 1);
@@ -106,6 +116,8 @@ foreach ($tags as $tagId => $tag) {
 if (isset($_GET["o"]) && $_GET["o"] == 'a'){
     $form->setDefaults(array(
         "name" => '',
+        "write_timestamp" => '1',
+        "write_thread_id" => '1',
         "activate" => '1'
     ));
     $tpl->assign('config_id', 0);

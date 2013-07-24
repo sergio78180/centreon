@@ -48,6 +48,7 @@
 	require_once "HTML/QuickForm.php";
     require_once 'HTML/QuickForm/advmultiselect.php';
 	require_once 'HTML/QuickForm/Renderer/ArraySmarty.php';
+    require_once 'HTML/QuickForm/advmultiselect.php';
     
     $connectorObj = new CentreonConnector($pearDB);
     

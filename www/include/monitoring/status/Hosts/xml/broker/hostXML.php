@@ -39,8 +39,8 @@
 	include_once "@CENTREON_ETC@/centreon.conf.php";
 	include_once $centreon_path . "www/class/centreonXMLBGRequest.class.php";
 	include_once $centreon_path . "www/class/centreonInstance.class.php";
-        include_once $centreon_path . "www/class/centreonCriticality.class.php";
-        include_once $centreon_path . "www/class/centreonMedia.class.php";
+    include_once $centreon_path . "www/class/centreonCriticality.class.php";
+    include_once $centreon_path . "www/class/centreonMedia.class.php";
 	include_once $centreon_path . "www/include/common/common-Func.php";
 
 	/*
@@ -129,9 +129,9 @@
 	if ($hostgroups) {
 		$rq1 .= " hosts_hostgroups hhg, ";
 	}
-        if ($criticality_id) {
-            $rq1 .= "customvariables cvs, ";
-        }
+    if ($criticality_id) {
+        $rq1 .= "customvariables cvs, ";
+    }
 	$rq1 .= " `hosts` h ";
 	$rq1 .= " LEFT JOIN hosts_hosts_parents hph ";
         $rq1 .= " ON hph.parent_id = h.host_id ";
@@ -142,12 +142,12 @@
 	$rq1 .= " WHERE h.name NOT LIKE '_Module_%'";
         $rq1 .= " AND h.instance_id = i.instance_id ";
 
-        if ($criticality_id) {
-            $rq1 .= " AND h.host_id = cvs.host_id
-                      AND cvs.name = 'CRITICALITY_ID'
-                      AND cvs.service_id IS NULL
-                      AND cvs.value = '".$obj->DBC->escape($criticality_id)."' ";
-        }
+    if ($criticality_id) {
+        $rq1 .= " AND h.host_id = cvs.host_id
+                  AND cvs.name = 'CRITICALITY_ID'
+                  AND cvs.service_id IS NULL
+                  AND cvs.value = '".$obj->DBC->escape($criticality_id)."' ";
+    }
         
 	if (!$obj->is_admin) {
             $rq1 .= " AND h.host_id = centreon_acl.host_id " . $obj->access->queryBuilder("AND", "centreon_acl.group_id", $obj->grouplistStr);
