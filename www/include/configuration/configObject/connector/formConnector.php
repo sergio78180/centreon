@@ -96,9 +96,7 @@ try {
 	unset($row);
 	$DBRESULT->free();
 
-    /*                                                                                                                                                                                                            
-     * Commands                                                                                                                                                                                                   
-     */
+    /*                                                                                                                                                                                                             * Commands                                                                                                                                                                                                    */
     $command = array();
     $DBRESULT = $pearDB->query("SELECT command_id, command_name FROM `command` ORDER BY `command_name`");
     while ($row = $DBRESULT->fetchRow()) {
@@ -117,7 +115,9 @@ try {
 	unset($row);
 	$DBRESULT->free();
     
-    $availableConnectors_list = return_plugin($oreon->optGen["cengine_path_connectors"]);
+    $DBRESULT = $pearDB->query("SELECT centreonconnector_path FROM `nagios_server` WHERE localhost = '1' AND ns_activate = '1'");
+    $row = $DBRESULT->fetchRow();
+    $availableConnectors_list = return_plugin($row["centreonconnector_path"]);
     
     $form = new HTML_QuickForm('Form', 'post', "?p=".$p);
     
@@ -131,13 +131,13 @@ try {
     
     $attrsText 		= array("size"=>"35");
 	$attrsTextarea 	= array("rows"=>"9", "cols"=>"65", "id"=>"command_line");
-    //$attrsTextarea2 = array("rows"=>"$nbRow", "cols"=>"100", "id"=>"listOfArg");
+    $attrsAdvSelect = array("style" => "width: 270px; height: 100px;");
+   	$eTemplate	= '<table><tr><td><div class="ams">{label_2}</div>{unselected}</td><td align="center">{add}<br /><br /><br />{remove}</td><td><div class="ams">{label_3}</div>{selected}</td></tr></table>';
 
-    
     $form->addElement('text', 'connector_name', _("Connector Name"), $attrsText);
     $form->addElement('text', 'connector_description', _("Connector Description"), $attrsText);
 	$form->addElement('textarea', 'command_line', _("Command Line"), $attrsTextarea);
-    
+
     $form->addElement('select', 'resource', null, $resource);
 	$form->addElement('select', 'macros', null, $macros);
 	ksort($availableConnectors_list);
@@ -157,7 +157,7 @@ try {
     if (isset($cnt['connector_status']) && is_numeric($cnt['connector_status']))
 		$form->setDefaults(array('connector_status' => $cnt['connector_status']));
 	else
-		$form->setDefaults(array('connector_status' => '0'));
+		$form->setDefaults(array('connector_status' => '1'));
     
     if ($o == "w") {
         if ($centreon->user->access->page($p) != 2) {
@@ -193,6 +193,7 @@ try {
         $connectorValues['description'] = $tab['connector_description'];
         $connectorValues['command_line'] = $tab['command_line'];
         $connectorValues['enabled'] = (int)$tab['connector_status']['connector_status'];
+        $connectorValues['command_id'] = $tab['command_id'];
         $connectorId = $tab['connector_id'];
         
         if ($form->getSubmitValue("submitA")) {
