@@ -164,7 +164,7 @@ class CentreonConnector
             } else {
                 if (isset($connector["command_id"])) {
                     foreach ($connector["command_id"] as $key => $value) {
-                        $updateResult = $this->dbConnection->query("UPDATE `command` SET connector_id = '$id' WHERE `command_id` = '$value'");
+                        $updateResult = $this->dbConnection->query("UPDATE `command` SET connector_id = '".$lastId['id']."' WHERE `command_id` = '$value'");
                         if (PEAR::isError($updateResult)) {
                             throw new RuntimeException('Cannot update connector');
                         }
@@ -213,7 +213,7 @@ class CentreonConnector
         $connector['modified'] = (int) $connector['modified'];
 
         $connector['command_id'] = array();
-        $DBRESULT = $this->dbConnection->query("SELECT command_id FROM command WHERE connector_id = '$connector_id'");
+        $DBRESULT = $this->dbConnection->query("SELECT command_id FROM command WHERE connector_id = '".$connector['id']."'");
         while ($row = $DBRESULT->fetchRow()) {
             $connector['command_id'][] = $row["command_id"];
         }
@@ -268,7 +268,7 @@ class CentreonConnector
             }
             $sqlParts = implode(', ', $sqlParts);
             $values[] = $id;
-            $updateResult = $this->dbConnection->query("UPDATE  `connector` SET $sqlParts WHERE  `connector`.`id` = ? LIMIT 1", $values);
+            $updateResult = $this->dbConnection->query("UPDATE `connector` SET $sqlParts WHERE `id` = ? LIMIT 1", $values);
             if (PEAR::isError($updateResult)) {
                 throw new RuntimeException('Cannot update connector');
             }
@@ -278,7 +278,7 @@ class CentreonConnector
         if (PEAR::isError($updateResult)) {
             throw new RuntimeException('Cannot update connector');
         }
-        
+
         if (isset($connector["command_id"])) {
             foreach ($connector["command_id"] as $key => $value) {
                 $updateResult = $this->dbConnection->query("UPDATE `command` SET connector_id = '$id' WHERE `command_id` = '$value'");
