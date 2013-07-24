@@ -148,12 +148,7 @@
 					$key = str_replace("nagios", "icinga", $key);
 				}
 				$str .= $key."=".$value."\n";
-			} else if (($key == "use_check_result_path" || $key == "use_check_result_path") && $value)	{
-				if (isset($tab['monitoring_engine']) && ($tab["monitoring_engine"] == "CENGINE")) {
-					$str .= $key."=".$value."\n";
-				}
-			}
-            else if ($key == "broker_module") {
+			} else if ($key == "broker_module") {
 				foreach ($nagios["broker_module"] as $kBrm => $vBrm)
 					if ( $vBrm["broker_module"] != NULL )
 						$str .= $key."=".$vBrm["broker_module"]."\n";
