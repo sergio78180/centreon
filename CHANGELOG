@@ -13,7 +13,9 @@ Enhancements
 
 Bug fixes
 =========
+#4620: Service groups are displayed twice in "Service Details"
 #4652: Fix issues in connector form
+#4658: Problem when adding new poller
 
 
 ## Centreon 2.4.4
