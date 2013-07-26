@@ -156,10 +156,6 @@
 			} else if ($key == "debug_level_opt");
 			else
 				$str .= $key."=".$value."\n";
-            
-            if (isset($tab['monitoring_engine']) && $tab['monitoring_engine'] == "NAGIOS") {
-                $str .= "check_for_updates=0\n";
-            }
 		}
 	}
 	if (isset($tab['monitoring_engine']) && $tab['monitoring_engine'] == "NAGIOS") {
