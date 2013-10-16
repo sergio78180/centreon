@@ -9,7 +9,7 @@ Important notes
 Connector
 =========
 
-You can now linked a command to a connector from the connector form in `Configuration` > `Commands` > `Connectors`.
+You can now link a command to a connector from the connector form in `Configuration` > `Commands` > `Connectors`.
 
 
 Centreon Broker
