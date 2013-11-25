@@ -595,7 +595,7 @@ function divideHostsToHost($service_id) {
 								$macName = str_replace("\$", "", $sv["svc_macro_name"]);
 							    $macVal = $sv['svc_macro_value'];
 								$mTpRq2 = "INSERT INTO `on_demand_macro_service` (`svc_svc_id`, `svc_macro_name`, `svc_macro_value`) VALUES " .
-											"('".$maxId["MAX(service_id)"]."', '\$".$macName."\$', '". $pearDB->escape($macVal) ."')";
+											"('".$maxId["MAX(service_id)"]."', '\$".$macName."\$', '". $pearDB->escape($macVal, false) ."')";
 						 		$DBRESULT4 = $pearDB->query($mTpRq2);
 								$fields["_".strtoupper($macName)."_"] = $sv['svc_macro_value'];
 							}
@@ -889,7 +889,7 @@ function divideHostsToHost($service_id) {
 		 			$my_tab[$macInput] = str_replace("\$", "", $my_tab[$macInput]);
 		 			$macName = $my_tab[$macInput];
 		 			$macVal = $my_tab[$macValue];
-		 			$rq = "INSERT INTO on_demand_macro_service (`svc_macro_name`, `svc_macro_value`, `svc_svc_id`) VALUES ('\$_SERVICE". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal) ."', ". $service_id["MAX(service_id)"] .")";
+		 			$rq = "INSERT INTO on_demand_macro_service (`svc_macro_name`, `svc_macro_value`, `svc_svc_id`) VALUES ('\$_SERVICE". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal, false) ."', ". $service_id["MAX(service_id)"] .")";
 			 		$DBRESULT = $pearDB->query($rq);
 					$fields["_".strtoupper($my_tab[$macInput])."_"] = $my_tab[$macValue];
 					$already_stored[strtolower($my_tab[$macInput])] = 1;
@@ -1214,7 +1214,7 @@ function divideHostsToHost($service_id) {
 		 			$_POST[$macInput] = str_replace("\$", "", $_POST[$macInput]);
 		 			$macName = $_POST[$macInput];
 		 			$macVal = $_POST[$macValue];
-		 			$rq = "INSERT INTO on_demand_macro_service (`svc_macro_name`, `svc_macro_value`, `svc_svc_id`) VALUES ('\$_SERVICE". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal) ."', ". $service_id .")";
+		 			$rq = "INSERT INTO on_demand_macro_service (`svc_macro_name`, `svc_macro_value`, `svc_svc_id`) VALUES ('\$_SERVICE". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal, false) ."', ". $service_id .")";
 			 		$DBRESULT = $pearDB->query($rq);
 					$fields["_".strtoupper($_POST[$macInput])."_"] = $_POST[$macValue];
 					$already_stored[strtolower($_POST[$macInput])] = 1;
@@ -1516,7 +1516,7 @@ function divideHostsToHost($service_id) {
 		 			$_POST[$macInput] = str_replace("\$", "", $_POST[$macInput]);
 		 			$macName = $_POST[$macInput];
 		 			$macVal = $_POST[$macValue];
-	 				$rq = "UPDATE on_demand_macro_service SET `svc_macro_value`='". CentreonDB::escape($macVal) . "'".
+	 				$rq = "UPDATE on_demand_macro_service SET `svc_macro_value`='". CentreonDB::escape($macVal, false) . "'".
 	 					  " WHERE `svc_svc_id`=" . $service_id .
 	 					  " AND `svc_macro_name`='\$_SERVICE" . CentreonDB::escape($macName) . "\$'";
 			 		$DBRESULT = $pearDB->query($rq);
@@ -1526,7 +1526,7 @@ function divideHostsToHost($service_id) {
 		 			$_POST[$macInput] = str_replace("\$", "", $_POST[$macInput]);
 		 			$macName = $_POST[$macInput];
 		 			$macVal = $_POST[$macValue];
-		 			$rq = "INSERT INTO on_demand_macro_service (`svc_macro_name`, `svc_macro_value`, `svc_svc_id`) VALUES ('\$_SERVICE". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal) ."', ". $service_id .")";
+		 			$rq = "INSERT INTO on_demand_macro_service (`svc_macro_name`, `svc_macro_value`, `svc_svc_id`) VALUES ('\$_SERVICE". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal, false) ."', ". $service_id .")";
 			 		$DBRESULT = $pearDB->query($rq);
 					$already_stored[$_POST[$macInput]] = 1;
 	 			}

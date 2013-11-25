@@ -426,9 +426,9 @@
 							$macName = str_replace("\$", "", $hst["host_macro_name"]);
 							$macVal = $hst['host_macro_value'];
 							$mTpRq2 = "INSERT INTO `on_demand_macro_host` (`host_host_id`, `host_macro_name`, `host_macro_value`) VALUES" .
-										"('".$maxId["MAX(host_id)"]."', '\$".$macName."\$', '". $macVal ."')";
+										"('".$maxId["MAX(host_id)"]."', '\$".$macName."\$', '". $pearDB->escape($macVal, false) ."')";
 					 		$DBRESULT4 = $pearDB->query($mTpRq2);
-							$fields["_".strtoupper($macName)."_"] = $macVal;
+							$fields["_".strtoupper($macName)."_"] = $pearDB->escape($macVal, false);
 						}
 
 						/*
@@ -782,7 +782,7 @@
 		 			$my_tab[$macInput] = str_replace("\$", "", $my_tab[$macInput]);
 		 			$macName = $my_tab[$macInput];
 		 			$macVal = $my_tab[$macValue];
-		 			$rq = "INSERT INTO on_demand_macro_host (`host_macro_name`, `host_macro_value`, `host_host_id`) VALUES ('\$_HOST". strtoupper($macName) ."\$', '". $macVal ."', ". $host_id['MAX(host_id)'] .")";
+		 			$rq = "INSERT INTO on_demand_macro_host (`host_macro_name`, `host_macro_value`, `host_host_id`) VALUES ('\$_HOST". strtoupper($macName) ."\$', '". $pearDB->escape($macVal, false) ."', ". $host_id['MAX(host_id)'] .")";
 			 		$DBRESULT = $pearDB->query($rq);
 					$fields["_".strtoupper($my_tab[$macInput])."_"] = $my_tab[$macValue];
 					$already_stored[strtolower($my_tab[$macInput])] = 1;
@@ -1250,7 +1250,7 @@
 		 			$_POST[$macInput] = str_replace("\$", "", $_POST[$macInput]);
 		 			$macName = $_POST[$macInput];
 		 			$macVal = $_POST[$macValue];
-		 			$rq = "INSERT INTO on_demand_macro_host (`host_macro_name`, `host_macro_value`, `host_host_id`) VALUES ('\$_HOST". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal) ."', ". $host_id .")";
+		 			$rq = "INSERT INTO on_demand_macro_host (`host_macro_name`, `host_macro_value`, `host_host_id`) VALUES ('\$_HOST". CentreonDB::escape(strtoupper($macName)) ."\$', '". CentreonDB::escape($macVal, false) ."', ". $host_id .")";
 			 		$DBRESULT = $pearDB->query($rq);
 					$fields["_".strtoupper($_POST[$macInput])."_"] = $_POST[$macValue];
 					$already_stored[strtolower($_POST[$macInput])] = 1;
@@ -1599,7 +1599,7 @@
 		 			$_POST[$macInput] = str_replace("\$", "", $_POST[$macInput]);
 		 			$macName = $_POST[$macInput];
 		 			$macVal = $_POST[$macValue];
-	 				$rq = "UPDATE on_demand_macro_host SET `host_macro_value`='". $macVal . "'".
+	 				$rq = "UPDATE on_demand_macro_host SET `host_macro_value`='". $pearDB->escape($macVal, false) . "'".
 	 					  " WHERE `host_host_id`=" . $host_id .
 	 					  " AND `host_macro_name`='\$_HOST" . $macName . "\$'";
 			 		$DBRESULT = $pearDB->query($rq);
@@ -1609,7 +1609,7 @@
 		 			$_POST[$macInput] = str_replace("\$", "", $_POST[$macInput]);
 		 			$macName = $_POST[$macInput];
 		 			$macVal = $_POST[$macValue];
-		 			$rq = "INSERT INTO on_demand_macro_host (`host_macro_name`, `host_macro_value`, `host_host_id`) VALUES ('\$_HOST". strtoupper($macName) ."\$', '". $macVal ."', ". $host_id .")";
+		 			$rq = "INSERT INTO on_demand_macro_host (`host_macro_name`, `host_macro_value`, `host_host_id`) VALUES ('\$_HOST". strtoupper($macName) ."\$', '". $pearDB->escape($macVal, false) ."', ". $host_id .")";
 			 		$DBRESULT = $pearDB->query($rq);
 					$already_stored[strtolower($_POST[$macInput])] = 1;
 	 			}
