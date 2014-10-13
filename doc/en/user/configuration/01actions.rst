@@ -46,12 +46,12 @@ To duplicate a host:
 1.	Select  the host that you want to duplicate
 2.	In the **Options column**, enter the number of duplications that you want to obtain
 
-.. image :: /images/guide_utilisateur/configuration/01duplicate.png
+.. image :: /images/user/configuration/01duplicate.png
    :align: center 
 
 3.	In the **More actions...** menu click on **Duplicate**
 
-.. image :: /images/guide_utilisateur/configuration/01duplicateobjects.png
+.. image :: /images/user/configuration/01duplicateobjects.png
    :align: center
 
 **************
