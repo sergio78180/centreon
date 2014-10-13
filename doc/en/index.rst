@@ -6,9 +6,7 @@
 Welcome to Centreon's documentation!
 ====================================
 
-Centreon is an Open Source software package that lets you supervise
-all the infrastructures and applications comprising your information
-system. 
+Centreon is open source software which enables you to supervise all the elements comprising your information system.
 
 Contents:
 
