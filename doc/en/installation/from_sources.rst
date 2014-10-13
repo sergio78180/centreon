@@ -24,7 +24,7 @@ CentOS and RHEL environments do not possess as standard on archives all the depe
   $ wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.i386.rpm
   $ wget http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt
 
-64-bit systemp:
+64-bit system:
 
  ::
 
