@@ -62,8 +62,8 @@ Configuration
 To add a host template :
 
 #. Go into the menu: **Configuration** ==> **Hosts**
-2. In the left menu, click on **Templates**
-3. Click on **Add**
+#. In the left menu, click on **Templates**
+#. Click on **Add**
 
 .. note::
    Refer to the chapter covering configuration of :ref:`hosts<hostconfiguration> to configure a template because the form is identical.
@@ -86,8 +86,8 @@ Configuration
 To add a Service Template:
 
 #. Go into the menu: **Configuration** ==> **Services**
-2. In the left menu, click on **Templates**
-3. Click on **Add**
+#. In the left menu, click on **Templates**
+#. Click on **Add**
 
 .. note::
    Refer to the chapter covering configuration of :ref: `services<serviceconfiguration>` to configure a template because the form is identical.
