@@ -13,7 +13,12 @@ There are three types of command:
 *       **Verification** commands are used by the schedulers to verify the status of a host or of a service.
 *       **Notification** commands are used by the schedulers to alert the contacts (via mail, SMS, etc.).
 *       **Miscellaneous** commands are used by the additional modules (to perform certain actions), by the scheduler for data processing, etc.
+
 All the commands can be configured in the menu: **Configuration ==> Commands**.
+
+.. image :: /images/user/configuration/04commandlist.png
+   :align: center
+
 
 **************** 
 Adding a command
@@ -23,12 +28,12 @@ Before adding a command:
 
 1.      In the left menu select the type of command that you want to add  (Verification, Notification or Miscellaneous).
 
-.. image :: /images/guide_utilisateur/configuration/04leftmenu.png
+.. image :: /images/user/configuration/04leftmenu.png
       :align: center
  
 2.      Click on Add
 
-.. image :: /images/guide_utilisateur/configuration/04command.png
+.. image :: /images/user/configuration/04command.png
       :align: center
  
 .. Note::
@@ -46,7 +51,7 @@ Configuration fields
         These fields serve to execute the command line defined above via the web interface by clicking on the blue arrow : |bluearrow|.
 *       The **Describe arguments** button serves to add  a description to arguments of the “$ARGn$” type. This description will be visible when using the command in a host or service form.
  
-.. image :: /images/guide_utilisateur/configuration/04linkbetweencommandandservices.png
+.. image :: /images/user/configuration/04linkbetweencommandandservices.png
       :align: center
 
 *       The **Clear arguments** button deletes the description of arguments defined

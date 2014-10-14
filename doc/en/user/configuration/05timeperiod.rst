@@ -41,7 +41,7 @@ Here are a few examples:
 *       24 hours a day and 7 days a week: 00:00-24:00 (to be applied on every day of the week).
 *       From 08h00 to 12h00 and from 14h00 to 18h45 (to be applied on weekdays only).
 
-.. image :: /images/guide_utilisateur/configuration/05timeperiod.png
+.. image :: /images/user/configuration/05timeperiod.png
       :align: center
 
 
