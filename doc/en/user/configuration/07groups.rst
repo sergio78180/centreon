@@ -62,7 +62,7 @@ To add a group of contacts:
 #. In the left menu, click on **Contact Groups**
 #. Click on **Add**
 
-.. image :: /images/guide_utilisateur/configuration/07contactgroup.png
+.. image :: /images/user/configuration/07contactgroup.png
    :align: center 
 
 *	The **Contact Group Name** and **Alias** fields define the name and the description of the contact group.
