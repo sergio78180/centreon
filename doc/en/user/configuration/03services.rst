@@ -8,7 +8,7 @@ A service is a check point linked / attached to a host. E.g.: Percentage of part
 
 All additions of services are done in the menu: **Configuration ==> Services ==> Add**.
 
-.. image :: /images/guide_utilisateur/configuration/03addservice.png
+.. image :: /images/user/configuration/03addservice.png
       :align: center
 
 ****************************

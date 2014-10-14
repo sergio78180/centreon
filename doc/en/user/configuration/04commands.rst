@@ -23,12 +23,12 @@ Before adding a command:
 
 1.      In the left menu select the type of command that you want to add  (Verification, Notification or Miscellaneous).
 
-.. image :: /images/guide_utilisateur/configuration/04leftmenu.png
+.. image :: /images/user/configuration/04leftmenu.png
       :align: center
  
 2.      Click on Add
 
-.. image :: /images/guide_utilisateur/configuration/04command.png
+.. image :: /images/user/configuration/04command.png
       :align: center
  
 .. Note::
