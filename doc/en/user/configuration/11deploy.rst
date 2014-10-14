@@ -9,6 +9,7 @@ Procedure
 *********
 
 On creation/deletion/change of objects via the configuration interface, the changes performed are not applied automatically to the scheduler. To apply the changes performed, it is necessary to follow the procedure below.
+
 .. note::
    It should always be done in 2 steps.
 
