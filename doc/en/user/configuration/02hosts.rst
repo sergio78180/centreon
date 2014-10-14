@@ -9,7 +9,7 @@ E.g.: A server, network printer, a NAS server, a temperature sensor, an IP camer
 
 All these host additions take place in the menu: **Configuration** ==> **Hosts** ==> **Add**.
 
-.. image :: /images/guide_utilisateur/configuration/02addhost.png
+.. image :: /images/user/configuration/02addhost.png
    :align: center
 
 *************************
