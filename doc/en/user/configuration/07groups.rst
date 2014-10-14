@@ -44,7 +44,7 @@ To add a service group:
 #. In the left menu, click on **Service Groups**
 #. Click on **Add**
 
-.. image :: /images/user/configuration/07contactgroup.png
+.. image :: /images/user/configuration/07servicegroup.png
    :align: center 
 
 *	The **Service group Name** and **Description** fields describes the name and the description of the service group.
