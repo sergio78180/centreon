@@ -59,9 +59,8 @@ General information
 
 If the **SQL matching** selection mode is selected the services used will be selected automatically by Centreon via a search based on the LIKE type SQL expression to be searched field. The metric to be used in this case will be selected from the Metric drop down list.
 
-..note::
-
- More information on PRINTF formatting `PRINTF <http://en.wikipedia.org/wiki/Printf_format_string>`_
+.. note::
+   More information on PRINTF formatting `PRINTF <http://en.wikipedia.org/wiki/Printf_format_string>`_
 
 
 Meta Service status

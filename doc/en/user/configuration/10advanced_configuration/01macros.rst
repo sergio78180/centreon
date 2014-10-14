@@ -92,7 +92,7 @@ They are complementary to standard macros. E.g.:
 *       The standard macro $CONTACTEMAIL$ makes reference to the e-mail address of the contact who uses the command of notification
 *       The  environment macro $CONTACTEMAIL:merethis$ returns the e-mail address of the user: “merethis”
 
-The complete documentation on macros “on demand” is available at this address: Macro list `Liste des macros <http://nagios.sourceforge.net/docs/3_0/macrolist.html>`_.
+The complete documentation on macros “on demand” is available at this address: Macro list `macro list <http://nagios.sourceforge.net/docs/3_0/macrolist.html>`_.
 
 .. note::
    The use of these macros is not recommended because the search for a value of a setting of an object from another object is a consumer in terms of resources.

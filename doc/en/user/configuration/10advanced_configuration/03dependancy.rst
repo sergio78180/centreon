@@ -65,6 +65,7 @@ To configure a logical dependencies:
 
 
 In this case, we have two types of host that come into play: one or more hosts (called master hosts) of which the status controls the execution and notification of other hosts (called dependent hosts). If you use the Centreon Broker, it is also possible to control the execution and notification of services (called dependent services) from master hosts.
+
 *       The **Name** and **Description** fields indicate the name and the description of the dependencies
 *       The **Parent relationship** field should be ignored if you use the Centreon Engine. If it is enabled, and if the dependencies links of the master host become unavailable, the dependencies in the process of creation is not taken into account.
 *       The **Execution Failure Criteria** field indicates the statuses of the master host(s) preventing the check of the hosts or the dependent services
@@ -155,6 +156,7 @@ To add a dependencies at the meta-services level:
       :align: center
 
 Two types of meta-services: a meta-service is called a “master” if it controls the execution and the notification of other (“dependent”) meta-services.
+
 *       The **Name** and **Description** fields indicate the name and description of the dependencies
 *       The **Parent relationship** field should be ignored if you use the Centreon Engine. If it is enabled, and if the links of dependencies of the master meta-service become unavailable the dependencies in the process of creation is no longer taken into account.
 *       The **Execution Failure Criteria** field Indicates which are the statuses of the meta-master service(s) that will prevent the check of the meta-dependent services

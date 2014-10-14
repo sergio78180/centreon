@@ -45,5 +45,6 @@ To add a category of services:
 *       The Is of criticality type box signifies that the category of service has a criticality level.
 *       The Level and icons fields define a criticality level and an associated icon respectively.
 *       The Status field allows us to enable or disable the category of services.
-Note: for more information refer to the associated chapter covering categories.
 
+.. note:: 
+  for more information refer to the associated chapter covering categories.
