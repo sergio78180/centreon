@@ -36,6 +36,9 @@ To add a category of services:
 1.      Go into the menu: Configuration ==> Services
 2.      In the left menu, click on Categories
 3.      Click on Add
+
+.. image :: /images/user/configuration/08servicecategory.png
+      :align: center
  
 *       The Name and Description fields define the name and the description of the category of service.
 *       If a Model of service belongs to Linked to models of services all the services belonging to this Model of service are in this category.
