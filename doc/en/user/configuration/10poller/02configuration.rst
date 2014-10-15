@@ -51,6 +51,11 @@ It is necessary to generate a configuration file for Centreon Broker:
 .. image :: /images/user/configuration/10advanced_configuration/07brokerconf.png
    :align: center 
 
+* In the **Output** tab, change the **Host to connect to** field by entering the IP address of the server containing your MySQL base (in our case the central server).
+
+.. image :: /images/guide_utilisateur/configuration/10advanced_configuration/07brokerconfoutput.png
+   :align: center 
+
 Centreontrapd Configuration
 ===========================
 
