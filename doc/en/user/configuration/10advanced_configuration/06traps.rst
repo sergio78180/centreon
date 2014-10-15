@@ -311,7 +311,7 @@ Very advanced configuration of the traps
 
 The **Advanced** tab serves to configure the behaviour of the handling process of the SNMP traps on its reception of the latter.
 
-.. image :: /images/guide_utilisateur/configuration/10advanced_configuration/06advancedconfiguration.png
+.. image :: /images/user/configuration/10advanced_configuration/06advancedconfiguration.png
       :align: center
  
 * **Enable routing** is used to enable the routing of information.
