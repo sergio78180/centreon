@@ -11,7 +11,7 @@ Once the installation is completed, it is necessary to integrate this satellite 
 *	Enter the IP address of the collector in the **IP Address** field.
 *	Enable the collector by clicking on **Enabled** in the **Status** field.
 
-.. image :: /images/guide_user/configuration/10advanced_configuration/07addpoller.png
+.. image :: /images/user/configuration/10advanced_configuration/07addpoller.png
    :align: center
 
 Now, it is necessary to generate a configuration file for Centreon Engine:
@@ -53,7 +53,7 @@ It is necessary to generate a configuration file for Centreon Broker:
 
 * In the **Output** tab, change the **Host to connect to** field by entering the IP address of the server containing your MySQL base (in our case the central server).
 
-.. image :: /images/guide_utilisateur/configuration/10advanced_configuration/07brokerconfoutput.png
+.. image :: /images/user/configuration/10advanced_configuration/07brokerconfoutput.png
    :align: center 
 
 Centreontrapd Configuration
