@@ -28,8 +28,8 @@ To add a view, click on **Add view**.
 .. image :: /images/guide_utilisateur/supervision/01addview.png
    :align: center 
 
-* The field **View name** indicates the name of the view which will be visible by the user
-* The field **Layout** allows to choose the number of columns in the view
+* The **View name** field indicates the name of the view which will be visible by the user
+* The **Layout** field allows to choose the number of columns in the view
 
 To change an existing view, click on **Edit view**.
 
@@ -42,9 +42,9 @@ Share view
 It is possible to share an existing view with one or more users.
 To do this, click on **Share view**.
 
-* If the field **Locked** is defined as **Yes**, the other users cannot change the view
-* The field **User List** allows to define the users with whom the view is shared
-* The field **User Group List** allows to define the user groups with which the view is shared 
+* If the **Locked** field is defined as **Yes**, the other users cannot change the view
+* The **User List** field allows to define the users with whom the view is shared
+* The **User Group List** field allows to define the user groups with which the view is shared 
 
 Insert widget
 =============
@@ -54,7 +54,7 @@ To add a widget, click on **Add widget**.
 .. image :: /images/guide_utilisateur/supervision/01addwidget.png
    :align: center 
 
-* The field **Widget Title** is used to define a name for our widget
+* The **Widget Title** field is used to define a name for our widget
 * Choose from the table below the widget type you want to add
 
 Customize widget
@@ -84,34 +84,34 @@ Host widget
 Filters
 -------
 
-* The field **Host Name Search** can be used to make a search on one or more hostnames
-* If the box **Display Up** is checked, the hosts with UP status will be displayed
-* If the box **Display Down** is checked, the hosts with DOWN status will be displayed
-* If the box **Display Unreachable** is checked, les hôtes en statut UNREACHABLE seront affichés
-* The list **Acknowledgement Filter** allows to display the acknowledged or not acknowledged hosts (if the list is empty, the two types of hosts will be displayed)
-* The list **Downtime Filter** allows to display the hosts that are subject or not subject to a downtime (if the list is empty, the two types of hosts will be displayed)
-* The list **State Type** alllows to display the hosts in SOFT or HARD states (if the list is empty, the two types of hosts will be displayed)
-* The list **Hostgroup** allows to display the hosts belonging to a certain host group (if the list is empty, all the hosts will be displayed)
-* The list **Results** limits the number of results
+* The **Host Name Search** field can be used to make a search on one or more hostnames
+* If the **Display Up** box is checked, the hosts with UP status will be displayed
+* If the **Display Down** box is checked, the hosts with DOWN status will be displayed
+* If the **Display Unreachable** box is checked, les hôtes en statut UNREACHABLE seront affichés
+* The **Acknowledgement Filter** list allows to display the acknowledged or not acknowledged hosts (if the list is empty, the two types of hosts will be displayed)
+* The **Downtime Filter** list allows to display the hosts that are subject or not subject to a downtime (if the list is empty, the two types of hosts will be displayed)
+* The **State Type** list allows to display the hosts in SOFT or HARD states (if the list is empty, the two types of hosts will be displayed)
+* The **Hostgroup** list allows to display the hosts belonging to a certain host group (if the list is empty, all the hosts will be displayed)
+* The **Results** list limits the number of results
 
 Columns
 -------
 
-* If the box **Display Host Name** is checked, the host name will be displayed
-* If the box **Display Output** is checked, the message associated with the status of the host will be displayed
-* The list **Output Length** can be used to limit the length of the message displayed
-* If the box **Display Status** is checked, the status of the host is displayed
-* If the box **Display IP** is checked, the IP address of the host is displayed
-* If the box **Display last Check** is checked, the date and the time of the last check is displayed
-* If the box **Display Duration** is checked, the time during which the host has retained its status is displayed
-* If the box **Display Hard State Duration** is checked, the time during which the host has retained its HARD state is displayed
-* If the box **Display Tries** is checked, the number tries before the validation of the status is displayed
-* The list **Order By** allows to classify the hosts in alphabetical order according to multiple settings
+* If the **Display Host Name** box is checked, the host name will be displayed
+* If the **Display Output** box is checked, the message associated with the status of the host will be displayed
+* The **Output Length** list can be used to limit the length of the message displayed
+* If the **Display Status** box is checked, the status of the host is displayed
+* If the **Display IP** box is checked, the IP address of the host is displayed
+* If the **Display last Check** box is checked, the date and the time of the last check is displayed
+* If the **Display Duration** box is checked, the time during which the host has retained its status is displayed
+* If the **Display Hard State Duration** box is checked, the time during which the host has retained its HARD state is displayed
+* If the **Display Tries** box is checked, the number tries before the validation of the status is displayed
+* The **Order By** list allows to classify the hosts in alphabetical order according to multiple settings
 
 Misc
 ----
 
-* The field **Refresh Interval (seconds)** allows to define the time before data refreshment
+* The **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
 Service widget
 ==============
@@ -119,63 +119,63 @@ Service widget
 Filters
 -------
 
-* The field **Host Name** can be used to make a search on one or more hostnames
-* The field **Service Description** can be used to make a search on one or more service names
-* If box **Display Ok** is checked, the services with OK status will be displayed
-* If box **Display Warning** is checked, the services with WARNING status will be displayed
-* If box **Display Critical** is checked, the services with CRITICAL status will be displayed
-* If box **Display Unknown** is checked, the services with UNKNOWN status will be displayed
-* If box **Display Pending** is checked, the services with PENDING status will be displayed
-* The list **Acknowledgement Filter** allows to display the services acknowledged or not acknowledged (if the list is empty, the two types of hosts will be displayed)
-* The list **Downtime Filter** allows to display the services that are subject or not subject to a downtime (if the list is empty, the two types of hosts will be displayed)
-* The list **State Type** allows to display the services with SOFT or HARD states (if the list is empty, the two types of hosts will be displayed)
-* The list **Hostgroup** allows to display the services belonging hosts belonging to a certain host group (if the list is empty, all the services will be displayed)
-* The list **Servicegroup** allows to display the services belonging to a certain service group (if the list is empty, all the services will be displayed)
-* The list **Results** limits the number of results
+* The **Host Name** field can be used to make a search on one or more hostnames
+* The **Service Description** field can be used to make a search on one or more service names
+* If the **Display Ok** box is checked, the services with OK status will be displayed
+* If the **Display Warning** box is checked, the services with WARNING status will be displayed
+* If the **Display Critical** box is checked, the services with CRITICAL status will be displayed
+* If the **Display Unknown** box is checked, the services with UNKNOWN status will be displayed
+* If the **Display Pending** box is checked, the services with PENDING status will be displayed
+* The **Acknowledgement Filter** list allows to display the services acknowledged or not acknowledged (if the list is empty, the two types of hosts will be displayed)
+* The **Downtime Filter** list allows to display the services that are subject or not subject to a downtime (if the list is empty, the two types of hosts will be displayed)
+* The **State Type** list allows to display the services with SOFT or HARD states (if the list is empty, the two types of hosts will be displayed)
+* The **Hostgroup** list allows to display the services belonging hosts belonging to a certain host group (if the list is empty, all the services will be displayed)
+* The **Servicegroup** list allows to display the services belonging to a certain service group (if the list is empty, all the services will be displayed)
+* The **Results** list limits the number of results
 
 Columns
 -------
 
-* If the box **Display Host Name** is checked, the host name will be displayed
-* If the box **Display Service Description** is checked, the name of the service will be displayed
-* If the box **Display Output** is checked, the message associated with the status of the host will be displayed
-* The list **Output Length** can be used to limit the length of the message displayed
-* If the box **Display Status** is checked, the status of the host is displayed
-* If the box **Display last Check** is checked, the date and the time of the last check is displayed
-* If the box **Display Duration** is checked, the time during which the host has retained its status is displayed
-* If the box **Display Hard State Duration** is checked, the time during which the host has retained its HARD state is displayed
-* If the box **Display Tries** is checked, the number of tries before the validation of the status is displayed
-* The list **Order By** allows to classify the services in alphabetical order according to multiple settings
+* If the **Display Host Name** box is checked, the host name will be displayed
+* If the **Display Service Description** box is checked, the name of the service will be displayed
+* If the **Display Output** box is checked, the message associated with the status of the host will be displayed
+* The **Output Length** list can be used to limit the length of the message displayed
+* If the **Display Status** box is checked, the status of the host is displayed
+* If the **Display last Check** box is checked, the date and the time of the last check is displayed
+* If the **Display Duration** box is checked, the time during which the host has retained its status is displayed
+* If the **Display Hard State Duration** box is checked, the time during which the host has retained its HARD state is displayed
+* If the **Display Tries** box is checked, the number of tries before the validation of the status is displayed
+* The **Order By** lsit allows to classify the services in alphabetical order according to multiple settings
 
 Misc
 ----
 
-* The field **Refresh Interval (seconds)** allows to define the time before data refreshment
+* The **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
 Performance Graph widget
 ========================
 
-* The field **Service** is used to choose the service for which the graph will be displayed
-* The list **Graph period** is used to choose the time period for which the graph will be displayed
-* The field **Refresh Interval (seconds)** allows to define the time before data refreshment
+* The **Service** field is used to choose the service for which the graph will be displayed
+* The **Graph period** list is used to choose the time period for which the graph will be displayed
+* The **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
 Host Group widget
 =================
 
-* The field **Hostgroup Name Search** can be used to choose the host groups displayed
-* If the box **Enable Detailed Mode** is checked, all the host names and the services associated with these hosts will be displayed for the hostgroups selected
-* The list **Results** allows us to limit the number of results
-* The list **Order By** is used to classify the service in alphabetical order according to multiple settings
-* the field **Refresh Interval (seconds)** allows to define the time before data refreshment
+* The **Hostgroup Name Search** field can be used to choose the host groups displayed
+* If the **Enable Detailed Mode** box is checked, all the host names and the services associated with these hosts will be displayed for the hostgroups selected
+* The **Results** list allows us to limit the number of results
+* The **Order By** lsit is used to classify the service in alphabetical order according to multiple settings
+* the **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
 Service Group widget
 ====================
 
-* The field **Servicegroup Name Search** can be used to choose the service groups displayed
-* If the box **Enable Detailed Mode** is checked, all the host names and the services associated with these hosts will be displayed for the service groups selected
-* The list **Results** allows us to limit the number of results
-* The list **Order By** is used to classify the service in alphabetical order according to multiple settings
-* the field **Refresh Interval (seconds)** allows to define the time before data refreshment
+* The **Servicegroup Name Search** field can be used to choose the service groups displayed
+* If the **Enable Detailed Mode** box is checked, all the host names and the services associated with these hosts will be displayed for the service groups selected
+* The **Results** list allows us to limit the number of results
+* The **Order By** lsit is used to classify the service in alphabetical order according to multiple settings
+* the **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
 .. |deletewidget|    image:: /images/guide_utilisateur/supervision/deletewidget.png
 .. |configurewidget|    image:: /images/guide_utilisateur/supervision/configurewidget.png

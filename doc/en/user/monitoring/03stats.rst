@@ -19,18 +19,18 @@ To view the performance information of your scheduler:
 
 Multiple tables allows to view the performance of your schedulers:
 
-* The table **Actively Checked** can be used to view the number of hosts and services checked in the last minute, the last five minutes, the last quarter of an hour or the last hour.
-* The table **Check Latency** can be used to view the minimum, maximum and average latency time of the checks performed on the hosts and the services.
+* The **Actively Checked** table can be used to view the number of hosts and services checked in the last minute, the last five minutes, the last quarter of an hour or the last hour.
+* The **Check Latency** table can be used to view the minimum, maximum and average latency time of the checks performed on the hosts and the services.
 .. warning::
     The longer the latency time, the later are the checks in relation to the initial time programmed by the scheduler. This requires a high load potential by the server.
 
-* The table **Buffer Usage** can be used to view the number of external commands awaiting processing by the scheduler.
+* The **Buffer Usage** table can be used to view the number of external commands awaiting processing by the scheduler.
 
 .. warning::
     in the case of a passive monitoring injecting many external commands to the scheduler, it is necessary to check this value. If it is too close to the size limit it is possible to lose commands; consequently it is necessary to increase the size of the buffer.
 
-* The table **Status** gives a brief view of the statuses of the hosts and services
-* The table **Check Execution Time** can be used to view the execution time of a probe, i.e. the time between when it is started and the moment when it transmits the information to the scheduler.
+* The **Status** table gives a brief view of the statuses of the hosts and services
+* The **Check Execution Time** table can be used to view the execution time of a probe, i.e. the time between when it is started and the moment when it transmits the information to the scheduler.
 
 .. warning::
     The longer the execution time, the more it is detrimental to the execution of the other processes in the queue and the more it generates of the latency. The plugins must be efficient not to engender latency.
@@ -63,21 +63,21 @@ Each performance contains multiple data :
 .. image :: /images/guide_utilisateur/supervision/03brokerperf.png
    :align: center 
 
-* The field **State** contains the status of the input, of the output and the status of the module itself
-* The field **Temporary recovery mode** indicates if the buffer file of the module is in use
-* The field **Last event at** indicates the date and the time of the last event to have occurred
-* The field **Event processing speed** indicates the number of events processed per second
-* The field **Last connection attempt** contains the date and the time of the last connection attempt
-* The field **Last connection success** contains the date and the time of the last successful connection
-* The field **Peers** describes the entities connected
-* The field **One peer retention mode** indicates the enabling or not of the unidirectional connection mode between the Centreon server and the poller
-* The field **Queued events** indicates the number of events to be processed
-* The field **File being read** indicates the failover file in the progress of being read
-* The field **Reading position (offset)** indicates the reading position associated with the failover file
-* The field **File being write** indicates the failover file in the progress of being write
-* The field **Write position (offset)** indicates the writing position associated with the failover file
-* The field **Max file size** indicates the maximum size of the failover file
-* The field **Failover** indicates the associated temporary backup file
+* The **State** field contains the status of the input, of the output and the status of the module itself
+* The **Temporary recovery mode** field indicates if the buffer file of the module is in use
+* The **Last event at** field indicates the date and the time of the last event to have occurred
+* The **Event processing speed** field indicates the number of events processed per second
+* The **Last connection attempt** field contains the date and the time of the last connection attempt
+* The **Last connection success** field contains the date and the time of the last successful connection
+* The **Peers** field describes the entities connected
+* The **One peer retention mode** field indicates the enabling or not of the unidirectional connection mode between the Centreon server and the poller
+* The **Queued events** field indicates the number of events to be processed
+* The **File being read** field indicates the failover file in the progress of being read
+* The **Reading position (offset)** field indicates the reading position associated with the failover file
+* The **File being write** field indicates the failover file in the progress of being write
+* The **Write position (offset)** field indicates the writing position associated with the failover file
+* The **Max file size** field indicates the maximum size of the failover file
+* The **Failover** field indicates the associated temporary backup file
 
 
 ******
