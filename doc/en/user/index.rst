@@ -8,6 +8,6 @@ User guide
 
    01a
    configuration/index
-   supervision/index
+   monitoring/index
    graphic_management/index
    01e
