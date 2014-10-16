@@ -253,9 +253,9 @@ It is also possible to import OIDs from MIBs provided by the manufacturers. To d
 .. image :: /images/user/configuration/10advanced_configuration/06importmibssuccess.png
       :align: center
  
-..note::
+.. note::
   The dependencies of the MIBS that you import must be present in the folder: /usr/share/snmp/mibs. Once the import is completed, delete the dependences previously copied.
-..note::
+.. note::
   Once the SNMP traps are imported, it is necessary to verify the “Supervision” status associated with the events. By default it will be “OK”.
 
 Manual configuration of traps 
@@ -277,10 +277,10 @@ It is also possible to create definitions of SNMP traps manually:
 * The field **Vendor name** defines the name of the manufacturer to which the trap to be selected in the drop-down list belongs.
 * The field **Output message** of contains the message to be displayed in the event of reception of a trap containing the OID configured above.
 
-..note::
+.. note::
   By default, the MIB contains the definition of this variable (E.g.: “Link up on interface $2. State: $4.”, here $2 will be replaced by the 2nd argument received in the event.). In the opposite situation, the variable $* can be used to display all the arguments contained in the trap.
 
-..note::
+.. note::
   It is possible to construct the output message yourself. For this, use the MIB to know the arguments that will be present in the body of the event and retrieve the arguments with the variables $n. As each argument is identified by a OID, it is possible to use this OID directly to place it in the output message without knowing its position via the variable @{OID}.
 
 * The **Default status** field defines the “monitoring” status of the service in case of reception of the trap.
@@ -299,7 +299,7 @@ For each rule, define the settings:
 * **Regexp** defined the REGEXP type search to be applied.
 * **Status** defines the status of the service in the event of concordance.
 
-..note::
+.. note::
   The order is important in the rules of correspondence because the process will stop at the first rule of which the correspondence is assured.
 
 * The **Disable submit result if no matched rules** field disables the sending of information to the scheduling engine if no correspondence with a rule is confirmed.
