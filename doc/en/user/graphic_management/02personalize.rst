@@ -113,17 +113,17 @@ Some examples of curves
 
 Stacked curves:
 
-.. image :: /images/guide_utilisateur/graphic_management/02graphempile.png
+.. image :: /images/user/graphic_management/02graphempile.png
       :align: center
  
 Reversed curves:
 
-.. image :: /images/guide_utilisateur/graphic_management/02graphinverse.png
+.. image :: /images/user/graphic_management/02graphinverse.png
       :align: center
  
 Curves with filling:
 
-.. image :: /images/guide_utilisateur/graphic_management/02graphremplissage.png
+.. image :: /images/user/graphic_management/02graphremplissage.png
       :align: center
 
 *************** 
@@ -159,7 +159,7 @@ To add a virtual metric:
 2. In the left menu, click on **Metrics** (under **Virtuals**)
 3. Click on **Add**
  
-.. image :: /images/graphic_management/02addvmetric.png
+.. image :: /images/user/graphic_management/02addvmetric.png
       :align: center
 
 * The field **Metric name** defines the name of the metric.
