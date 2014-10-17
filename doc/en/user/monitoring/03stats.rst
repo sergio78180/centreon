@@ -14,7 +14,7 @@ To view the performance information of your scheduler:
 #. In the left menu, click on **Performance Info**
 #. Choose your scheduler in the drop-down list **Poller**
 
-.. image :: /images/guide_utilisateur/supervision/03statsordonnanceur.png
+.. image :: /images/user/monitoring/03statsordonnanceur.png
    :align: center 
 
 Multiple tables allows to view the performance of your schedulers:
@@ -45,7 +45,7 @@ To view the statistics of Centreon Broker:
 #. In the left menu, click on **Broker Statistics**
 #. Choose your poller in the list entitled **Poller**
 
-.. image :: /images/guide_utilisateur/supervision/03statsbroker.png
+.. image :: /images/user/monitoring/03statsbroker.png
    :align: center 
 
 The performance of Centreon Broker is classified by entities of Centreon Broker (module scheduler, Broker-RRD, Broker-Central).
@@ -60,7 +60,7 @@ Input/Output Performance
 
 Each performance contains multiple data :
 
-.. image :: /images/guide_utilisateur/supervision/03brokerperf.png
+.. image :: /images/user/monitoring/03brokerperf.png
    :align: center 
 
 * The **State** field contains the status of the input, of the output and the status of the module itself
@@ -92,5 +92,5 @@ For this :
 #. Choose your poller in the list entitled **Poller**
 #. Choose the period on which you want to view the performance graphs
 
-.. image :: /images/guide_utilisateur/supervision/03graphperf.png
+.. image :: /images/user/monitoring/03graphperf.png
    :align: center 

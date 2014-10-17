@@ -25,7 +25,7 @@ Add view
 
 To add a view, click on **Add view**.
 
-.. image :: /images/guide_utilisateur/supervision/01addview.png
+.. image :: /images/user/monitoring/01addview.png
    :align: center 
 
 * The **View name** field indicates the name of the view which will be visible by the user
@@ -51,7 +51,7 @@ Insert widget
 
 To add a widget, click on **Add widget**.
 
-.. image :: /images/guide_utilisateur/supervision/01addwidget.png
+.. image :: /images/user/monitoring/01addwidget.png
    :align: center 
 
 * The **Widget Title** field is used to define a name for our widget
@@ -177,7 +177,7 @@ Service Group widget
 * The **Order By** lsit is used to classify the service in alphabetical order according to multiple settings
 * the **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
-.. |deletewidget|    image:: /images/guide_utilisateur/supervision/deletewidget.png
-.. |configurewidget|    image:: /images/guide_utilisateur/supervision/configurewidget.png
-.. |refreshwidget|    image:: /images/guide_utilisateur/supervision/refreshwidget.png
-.. |reducewidget|    image:: /images/guide_utilisateur/supervision/reducewidget.png
+.. |deletewidget|    image:: /images/user/monitoring/deletewidget.png
+.. |configurewidget|    image:: /images/user/monitoring/configurewidget.png
+.. |refreshwidget|    image:: /images/user/monitoring/refreshwidget.png
+.. |reducewidget|    image:: /images/user/monitoring/reducewidget.png

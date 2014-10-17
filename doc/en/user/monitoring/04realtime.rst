@@ -128,7 +128,7 @@ The left menu can be used to change the hosts visible in the table :
 * To view all the hosts, click on **Hosts**
 * To view the hosts classified by host groups, click on **Host Groups**
 
-.. image :: /images/guide_utilisateur/supervision/04hostgroup.png
+.. image :: /images/user/monitoring/04hostgroup.png
    :align: center 
 
 Host tables
@@ -203,7 +203,7 @@ Détails d'un hôte
 
 Lorsque vous cliquez sur un hôte, la page suivante s'affiche :
 
-.. image :: /images/guide_utilisateur/supervision/04hostdetail.png
+.. image :: /images/user/monitoring/04hostdetail.png
    :align: center 
 
 Détails du statut
@@ -306,7 +306,7 @@ Visualisation
 
 Pour visualiser le statut des services, rendez-vous dans le menu **Supervision** ==> **Services**.
 
-.. image :: /images/guide_utilisateur/supervision/04servicelist.png
+.. image :: /images/user/monitoring/04servicelist.png
    :align: center 
 
 La barre de recherche grise permet de filtrer les résultats affichés.
@@ -317,37 +317,37 @@ Le menu de gauche permet de modifier les services visibles au sein du tableau :
 * Pour visualiser tous les services, cliquez sur **Tous les services**
 * Pour visualiser tous les services (classés par hôtes), quel que soit le statut, cliquez sur **Détails** (en dessous d'hôtes)
 
-.. image :: /images/guide_utilisateur/supervision/04servicelistbyhostdetail.png
+.. image :: /images/user/monitoring/04servicelistbyhostdetail.png
    :align: center
    
 * Pour visualiser le nombre de services (classés par hôtes et statuts), cliquez sur **Résumé** (en dessous d'hôtes)
 
-.. image :: /images/guide_utilisateur/supervision/04servicelistbyhost.png
+.. image :: /images/user/monitoring/04servicelistbyhost.png
    :align: center
   
 * Pour visualiser tous les services (classés par groupes d'hôtes), cliquez sur **Détails** (en dessous de groupe d'hôtes)
 
-.. image :: /images/guide_utilisateur/supervision/04servicelistbyhostgroupdetail.png
+.. image :: /images/user/monitoring/04servicelistbyhostgroupdetail.png
    :align: center
    
 * Pour visualiser le nombre de services (classés par groupes d'hôtes et statuts), cliquez sur **Résumé** (en dessous de groupe d'hôtes)
 
-.. image :: /images/guide_utilisateur/supervision/04servicelistbyhostgroup.png
+.. image :: /images/user/monitoring/04servicelistbyhostgroup.png
    :align: center
    
 * Pour visualiser tous les services (classés par groupes de services), cliquez sur **Détails** (en dessous de groupe de services)
 
-.. image :: /images/guide_utilisateur/supervision/04servicelistbyservicegroupdetail.png
+.. image :: /images/user/monitoring/04servicelistbyservicegroupdetail.png
    :align: center
    
 * Pour visualiser le nombre de services (classés par groupes de services et statuts), cliquez sur **Résumé** (en dessous de groupe de services)
 
-.. image :: /images/guide_utilisateur/supervision/04servicelistbyservicegroup.png
+.. image :: /images/user/monitoring/04servicelistbyservicegroup.png
    :align: center
 
 * Pour visualiser les méta-services, cliquez sur **Méta-Services**
 
-.. image :: /images/guide_utilisateur/supervision/04metaservices.png
+.. image :: /images/user/monitoring/04metaservices.png
    :align: center
 
 Tableaux de services
@@ -424,7 +424,7 @@ Détails d'un service
 
 Lorsque vous cliquez sur un service, la page suivante s'affiche :
 
-.. image :: /images/guide_utilisateur/supervision/04servicedetail.png
+.. image :: /images/user/monitoring/04servicedetail.png
    :align: center
 
 Détails du statut
@@ -541,7 +541,7 @@ Pour visualiser la file d'attente :
 #. Rendez-vous dans le menu **Supervision  ==> Hôtes** ou **Services**
 #. Dans le menu de gauche, sous **Moteur de supervision**, cliquez sur **File d'attente**
 
-.. image :: /images/guide_utilisateur/supervision/04waitingqueue.png
+.. image :: /images/user/monitoring/04waitingqueue.png
    :align: center
 
 Le tableau ci-dessous décrit les colonnes de cette page.
@@ -580,7 +580,7 @@ Pour visualiser les temps d'arrêts en cours sur les ressources :
 #. Rendez-vous dans le menu **Supervision** ==> **Hôtes** ou **Services**
 #. Dans le menu de gauche, sous **Moteur de supervision**, cliquez sur **Temps d'arrêt**
 
-.. image :: /images/guide_utilisateur/supervision/04downtimelist.png
+.. image :: /images/user/monitoring/04downtimelist.png
    :align: center
 
 Le tableau ci-dessous décrit les colonnes de cette page.
@@ -628,7 +628,7 @@ Pour visualiser les commentaires définis sur les ressources :
 #. Rendez-vous dans le menu **Supervision** ==> **Hôtes** ou **Services**
 #. Dans le menu de gauche, sous **Moteur de supervision** cliquez sur **Commentaires**
 
-.. image :: /images/guide_utilisateur/supervision/04comments.png
+.. image :: /images/user/monitoring/04comments.png
    :align: center
 
 Le tableau ci-dessous décrit les colonnes de cette page.

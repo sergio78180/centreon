@@ -17,7 +17,7 @@ Tactical Overview
 
 To display the tactical overview, go to the menu **Home** ==> **Home**.
 
-.. image :: /images/guide_utilisateur/supervision/02tacticaloverview.png
+.. image :: /images/user/monitoring/02tacticaloverview.png
    :align: center 
 
 * The **Hosts** table can be used to view the general state of the hosts monitored by showing the number of objects per status (down, unreachable, up or pending to be monitored).
@@ -34,7 +34,7 @@ to display information about global health :
 #. Go to the menu **Home** ==> **Home**
 #. In the left menu, click on **Global Health**
 
-.. image :: /images/guide_utilisateur/supervision/02health.png
+.. image :: /images/user/monitoring/02health.png
    :align: center 
 
 .. warning:: 
