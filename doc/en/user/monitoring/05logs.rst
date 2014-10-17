@@ -19,7 +19,7 @@ Viewing
 
 To view the event logs, go into the menu: **Monitoring** ==> **Event logs**.
 
-.. image :: /images/guide_utilisateur/supervision/05log.png
+.. image :: /images/user/monitoring/05log.png
    :align: center
 
 The left menu can be used to select the hosts and/or the services event logs to be viewed
