@@ -17,9 +17,7 @@ Contents:
    installation/index
    upgrade/index
    user/index
-   exploitation/index
-   extending/index
-   faq/index
+   guide_exploitation/index
 
 Additional online resource:
 
