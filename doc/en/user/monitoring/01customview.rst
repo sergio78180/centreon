@@ -46,6 +46,8 @@ To do this, click on **Share view**.
 * The **User List** field allows to define the users with whom the view is shared
 * The **User Group List** field allows to define the user groups with which the view is shared 
 
+.. _leswidgets:
+
 Insert widget
 =============
 
