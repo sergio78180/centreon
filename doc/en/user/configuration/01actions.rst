@@ -69,7 +69,7 @@ A massive change enables us to change this community without it being necessary 
 Practice
 ========
 
-To perfor a massive change:
+To perform a massive change:
 
 #.	Select the objects you want change
 #.	In the **More Actions...** menu click on **Massive Change**

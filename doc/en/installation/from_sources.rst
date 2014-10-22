@@ -31,7 +31,7 @@ CentOS and RHEL environments do not possess as standard on archives all the depe
   $ wget http://packages.sw.be/rpmforge-release/rpmforge-release-0.5.1-1.el5.rf.x86_64.rpm
   $ wget http://dag.wieers.com/rpm/packages/RPM-GPG-KEY.dag.txt
 
-Use your favourite text editor and delete the first line of the RPM-GPG-KEY.dag.txt file. The first line should contain:
+Use your favorite text editor and delete the first line of the RPM-GPG-KEY.dag.txt file. The first line should contain:
 
  ::
 
@@ -184,7 +184,7 @@ If the Prerequisites installation step has been run successfully you should have
   #                         Centreon (www.centreon.com)                         #
   #                          Thanks for using Centreon                          #
   #                                                                             #
-  #                                    v2.4.0                                   #
+  #                                    v2.5.0                                   #
   #                                                                             #
   #                              infos@centreon.com                             #
   #                                                                             #
@@ -355,7 +355,7 @@ The **RRDs.pm** file can be located anywhere on the server. Use the following co
 Centreon user and group
 -----------------------
 
-he Centreon applications group: This group is used for the access rights between the various Centreon softwares:
+The Centreon applications group: This group is used for the access rights between the various Centreon softwares:
 
  ::
 
@@ -875,7 +875,7 @@ Click on the ``Next`` button.
 
 The installation is now finished, click on the ``Finish`` button, you will be redirected to the login screen:
 
-.. image:: /_static/images/installation/login.png
+.. image:: /images/user/aconnection.png
    :align: center
 
 Enter your credentials to log in.

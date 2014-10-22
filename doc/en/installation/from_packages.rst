@@ -47,7 +47,7 @@ From CES 2.2, two installation choices are available
 +=======================================+===================+=================+
 | centreon-base-config-centreon-engine  | Centreon Engine   | Centreon Broker |
 +---------------------------------------+-------------------+-----------------+
-| centreon-base-config-nagios           | Nagios            | Ndoutils        |
+| centreon-base-config-nagios           | Nagios            | NDOutils        |
 +---------------------------------------+-------------------+-----------------+
 
 You should choose between one of the two configuration processes of your monitoring platform. Merethis recommends the first choice based on the “Centreon Engine” scheduler and the “Centreon Broker” stream multiplexer.

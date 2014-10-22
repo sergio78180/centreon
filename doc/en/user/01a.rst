@@ -1,6 +1,4 @@
 ========================
-Get started with CES 3.0
-========================
 
 *********************
 Compared with CES 2.2
@@ -8,21 +6,21 @@ Compared with CES 2.2
 
 The following array compares CES 2.2 to CES 3.0 :
 
-+------------------------+-----------------------------+
-|       CES 2.2          |         CES 3.0             | 
-+========================+=============================+
-|       CentOS 5         |         CentOS 6.5          |
-+------------------------+-----------------------------+
-| Centreon 2.4           |  Centreon 2.5               |
-+------------------------+-----------------------------+
-| MySQL 5.1              |  MariaDB 5.5                |
-+------------------------+-----------------------------+
-| Centreon Engine 1.2    |  Centreon Engine 1.3.7      |
-+------------------------+-----------------------------+
-| Centreon Broker 2.1    |  Centreon Broker 2.6.1      |
-+------------------------+-----------------------------+
-| N/A                    |  Centreon Connecteur 1.0.2  |
-+------------------------+-----------------------------+
++------------------------+----------------------------+
+|       CES 2.2          |         CES 3.0            | 
++========================+============================+
+|       CentOS 5         |         CentOS 6.5         |
++------------------------+----------------------------+
+| Centreon 2.4           |  Centreon 2.5              |
++------------------------+----------------------------+
+| MySQL 5.1              |  MariaDB 5.5               |
++------------------------+----------------------------+
+| Centreon Engine 1.2    |  Centreon Engine 1.3.7     |
++------------------------+----------------------------+
+| Centreon Broker 2.1    |  Centreon Broker 2.6.1     |
++------------------------+----------------------------+
+| N/A                    |  Centreon Connector 1.0.2  |
++------------------------+----------------------------+
 
 The list of new features is available at the following addresses:
 
@@ -48,7 +46,7 @@ The Centreon web interface is more and more oriented towards the use of Centreon
 
 New features
 ------------
-Several new featuress make their appearance with Centreon Broker:
+Several new features make their appearance with Centreon Broker:
 
 * Possibility of encrypting supervision data transmitted to the central server
 * Possibility of compressing supervision data to avoid overloading the bandwidth
@@ -97,7 +95,7 @@ Start with the **Install or upgrade an existing system** option
    :align: center
    :scale: 65%
 
-Cliquez sur **Next**
+Click on **Next**
 
 .. image :: /images/user/adisplayicon.png
    :align: center
@@ -179,7 +177,7 @@ It is possible to choose different options in answer to the question: **Which se
 
 In our box, we shall choose the **Centreon Server with database** option.
 
-Choose the type of monitorign engine and broker
+Choose the type of monitoring engine and broker
 -----------------------------------------------
 
 When choosing the monitoring engine and the broker, it is possible to choose between the Centreon Engine / Centreon Broker pair or the Nagios / NDOUtils pair.
@@ -263,7 +261,7 @@ If the following error message appears: **Add innodb_file_per_table=1 in my.cnf 
 
 	/etc/my.cnf
 
-3.	Add theses lines to the file
+3.	Add these lines to the file
 
 .. raw:: latex 
 
@@ -335,7 +333,7 @@ Centreon web interface is made up of several menus, each menu has a specific fun
 *       The **Views** menu serves to view and configured the performances graphics for each element in the  information system.
 *       The **Reporting** menu serves to view, intuitively (via diagrams), the evolution of the supervision on a given period.
 *	The **Configuration** menu serves to configure all monitored objects and the supervision infrastructure.
-*       The **Administration** menu serves to configured the Centreon web interface and to view the general status of the servers.
+*       The **Administration** menu serves to configure the Centreon web interface and to view the general status of the servers.
 
 Before going further
 ====================

@@ -309,7 +309,7 @@ For each rule, define the settings:
 Very advanced configuration of the traps
 ----------------------------------------
 
-The **Advanced** tab serves to configure the behaviour of the handling process of the SNMP traps on its reception of the latter.
+The **Advanced** tab serves to configure the behavior of the handling process of the SNMP traps on its reception of the latter.
 
 .. image :: /images/user/configuration/10advanced_configuration/06advancedconfiguration.png
       :align: center
