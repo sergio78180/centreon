@@ -10,8 +10,8 @@ A time period is the definition of a time interval for every day of the week. Th
 
 Time periods apply to two types of actions:
 
-*       Execution of  check commands
-*       Sending of notifications
+* Execution of  check commands
+* Sending of notifications
 
 *************
 Configuration
@@ -19,31 +19,29 @@ Configuration
 
 The configuration of time periods is done in the menu: **Configuration ==> Users ==> Time periods**.
 
-
 Basic options 
 =============
 
-*       The  **Time period name** and **Alias** fields define the name and description of the time period respectively.
-*       The fields belonging to the **Time range** sub-category define the days of the week for which it is necessary to define time periods.
-*       The **Time Range exceptions** table enables us to include days excluded from the time period
+* The **Time period name** and **Alias** fields define the name and description of the time period respectively.
+* The fields belonging to the **Time range** sub-category define the days of the week for which it is necessary to define time periods.
+* The **Eexceptions** table enables us to include days excluded from the time period.
 
 Syntax of a time period
 =======================
 
 When creating a time period, the following characters serve to define the time periods :
 
-*       The character “:” separates the hours from the minutes. E.g.: HH:MM
-*       The character “-” indicates continuity between two time periods
-*       The character ”,” serve s to separate two time periods
+* The character “:” separates the hours from the minutes. E.g.: HH:MM
+* The character “-” indicates continuity between two time periods
+* The character ”,” serve s to separate two time periods
 
 Here are a few examples:
 
-*       24 hours a day and 7 days a week: 00:00-24:00 (to be applied on every day of the week).
-*       From 08h00 to 12h00 and from 14h00 to 18h45 (to be applied on weekdays only).
+* 24 hours a day and 7 days a week: 00:00-24:00 (to be applied on every day of the week).
+* From 08h00 to 12h00 and from 14h00 to 18h45 (to be applied on weekdays only).
 
 .. image :: /images/user/configuration/05timeperiod.png
       :align: center
-
 
 Time Range exceptions
 =====================
@@ -52,9 +50,9 @@ The exceptions allow us to include exceptional days in the time period (overload
 
 E.g.: An administrator wants to define a time period which covers the times when the offices are closed i.e.:
 
-*       From 18h00 to 07h59 on weekdays
-*       Round the clock at weekends
-*       National holidays and exceptional closure days
+* From 18h00 to 07h59 on weekdays
+* Round the clock at weekends
+* National holidays and exceptional closure days
 
 To be able to define the national holidays days and the exceptional closure days, it is necessary to use the exceptions.
 To add  an exception, click on the button |navigate_plus|. 
@@ -85,8 +83,8 @@ In the extended settings, it is possible to **include** or to **exclude** period
 
 Example of application: Let us take two time periods:
 
-*       One period is defined as 24 hours a day / 7 days a week, called **24x7**
-*       Another which covers the office opening hours, called **working_hours**
+* One period is defined as 24 hours a day / 7 days a week, called **24x7**
+* Another which covers the office opening hours, called **working_hours**
 
 To obtain the office closing hours, we simply have to create a time period in which we include the period **24x7** and from which we exclude the **working_hours** period.
 
