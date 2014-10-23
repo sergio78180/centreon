@@ -25,7 +25,7 @@ Add view
 
 To add a view, click on **Add view**.
 
-.. image :: /images/user/monitoring/01addview.png
+.. image:: /images/user/monitoring/01addview.png
    :align: center 
 
 * The **View name** field indicates the name of the view which will be visible by the user
@@ -53,7 +53,7 @@ Insert widget
 
 To add a widget, click on **Add widget**.
 
-.. image :: /images/user/monitoring/01addwidget.png
+.. image:: /images/user/monitoring/01addwidget.png
    :align: center 
 
 * The **Widget Title** field is used to define a name for our widget
@@ -89,7 +89,7 @@ Filters
 * The **Host Name Search** field can be used to make a search on one or more hostnames
 * If the **Display Up** box is checked, the hosts with UP status will be displayed
 * If the **Display Down** box is checked, the hosts with DOWN status will be displayed
-* If the **Display Unreachable** box is checked, les hôtes en statut UNREACHABLE seront affichés
+* If the **Display Unreachable** box is checked, the hosts with UNREACHABLE status will be displayed
 * The **Acknowledgement Filter** list allows to display the acknowledged or not acknowledged hosts (if the list is empty, the two types of hosts will be displayed)
 * The **Downtime Filter** list allows to display the hosts that are subject or not subject to a downtime (if the list is empty, the two types of hosts will be displayed)
 * The **State Type** list allows to display the hosts in SOFT or HARD states (if the list is empty, the two types of hosts will be displayed)
