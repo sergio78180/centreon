@@ -3,9 +3,9 @@ Performance graphs management
 =============================
 
 .. toctree::
-      :maxdepth: 2
-   :glob:
+    :maxdepth: 2
+    :glob:
 
-   01graphs
-   02personalize
+    01graphs
+    02personalize
 

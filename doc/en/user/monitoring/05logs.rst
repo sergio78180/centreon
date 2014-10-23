@@ -19,10 +19,10 @@ Viewing
 
 To view the event logs, go into the menu: **Monitoring** ==> **Event logs**.
 
-.. image :: /images/user/monitoring/05log.png
+.. image:: /images/user/monitoring/05log.png
    :align: center
 
-The left menu can be used to select the hosts and/or the services event logs to be viewed
+The left menu can be used to select the hosts and/or the services event logs to be viewed.
 
 The grey search bar called **Log Period** can be used to select the time period for which we want to view the events.
 The drop-down list can be used to select generic time periods. If the drop-down list is empty it is possible to choose the time period manually using the **From** and **To** fields.
@@ -49,7 +49,7 @@ Status of the host or the service
 =================================
 
 .. note::
-    the choice made here affects the checked boxes in **Message Type**. It is also possible to view the different messages by selecting the status desired for the hosts or services manually.
+    The choice made here affects the checked boxes in **Message Type**. It is also possible to view the different messages by selecting the status desired for the hosts or services manually.
 
 *******
 Results

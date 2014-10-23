@@ -48,7 +48,7 @@ The table below summarises all the possible statuses for a service.
 Advanced statuses
 =================
 
-In addition to the standard statuses, new statuses can be used to add additional information :
+In addition to the standard statuses, new statuses can be used to add additional information:
 
 * The PENDING status is a status displayed for a service or a host freshly configured but which has not yet been checked by the scheduler.
 * The UNREACHABLE status is a status indicating that the host (parental relationship) is situated downstream of a host with a DOWN status.
@@ -59,7 +59,7 @@ In addition to the standard statuses, new statuses can be used to add additional
 SOFT and HARD states
 ====================
 
-A host or a service can have two states :
+A host or a service can have two states:
 
 * SOFT : Signifies that an incident has just been detected and that it has to be confirmed.
 * HARD : Signifies that the status of the incident is confirmed. Once the status is confirmed, the notification process is engaged (sending of a mail, SMS, etc.).
@@ -71,24 +71,24 @@ An incident (Not-OK status) is confirmed as of the moment when the number of val
 The configuration of an object (host or service) requires a regular check interval, a number of attempts to confirm a Not-OK status and an irregular check interval.
 As soon as the first incident is detected, the state is "SOFT" until its confirmation into "HARD", triggering the notification process.
 
-Example :
+Example:
 
-A service has the following check settings :
+A service has the following check settings: 
 
- * Max check attempts : 3
- * Normal check interval : 5 minutes
- * Retry check interval : 1 minute
+* Max check attempts : 3
+* Normal check interval : 5 minutes
+* Retry check interval : 1 minute
  
-Let us imagine the following scenario :
+Let us imagine the following scenarii:
 
- * Instant t + 0 : The service is checked, it has the OK status.
- * Instant t + 5 : The second check shows that the service has the CRITICAL status. The service goes into the SOFT state (attempt 1/3).
- * Instant t + 6 : The third check is performed, the service still has the CRITICAL status in SOFT (attempt 2/3).
- * Instant t + 7 : The fourth check shows that the service still has the CRITICAL status (attempt 3/3). The number of tests has been completed; the state is configured (HARD). The notification process is triggered.
- * Instant t + 8 : The service recovers OK status. It goes directly into the HARD state. The notification process is triggered.
- * Instant t + 13 : The service has the WARNING status. It goes into the SOFT state (attempt 1/3).
- * Instant t + 14 : The service still has the WARNING status (attempt 2/3).
- * Instant t + 15 : The service has the CRITICAL status. It remains in the SOFT state because it has changed status.
+* Instant t + 0 : The service is checked, it has the OK status.
+* Instant t + 5 : The second check shows that the service has the CRITICAL status. The service goes into the SOFT state (attempt 1/3).
+* Instant t + 6 : The third check is performed, the service still has the CRITICAL status in SOFT (attempt 2/3).
+* Instant t + 7 : The fourth check shows that the service still has the CRITICAL status (attempt 3/3). The number of tests has been completed; the state is configured (HARD). The notification process is triggered.
+* Instant t + 8 : The service recovers OK status. It goes directly into the HARD state. The notification process is triggered.
+* Instant t + 13 : The service has the WARNING status. It goes into the SOFT state (attempt 1/3).
+* Instant t + 14 : The service still has the WARNING status (attempt 2/3).
+* Instant t + 15 : The service has the CRITICAL status. It remains in the SOFT state because it has changed status.
 
 ***************
 Generic actions
@@ -96,7 +96,7 @@ Generic actions
 
 By default, during viewing of statuses of hosts or services, the monitoring data is refreshed automatically (15 seconds by default).
 Nevertheless, several icons can be used to check the refreshing of the data.
-The table below summarises the functions of these icons :
+The table below summarises the functions of these icons:
 
 +------------+-----------------------------------------------------------------------+
 |   Icon     |   Description                                                         | 
@@ -117,24 +117,24 @@ Viewing
 
 To view the status of hosts, go into the menu **Monitoring** ==> **Hosts**.
 
-.. image :: images/01.png
+.. image:: images/01.png
    :align: center
 
 The grey search bar can be used to filter the result displays.
-The left menu can be used to change the hosts visible in the table :
+The left menu can be used to change the hosts visible in the table:
 
 * To view the hosts with a problem but not acknowledged, click on **Unhandled Problems**
 * To view all the hosts with a problem, click on **Host Problems**
 * To view all the hosts, click on **Hosts**
 * To view the hosts classified by host groups, click on **Host Groups**
 
-.. image :: /images/user/monitoring/04hostgroup.png
+.. image:: /images/user/monitoring/04hostgroup.png
    :align: center 
 
 Host tables
 ===========
 
-The table below gives a description of all the columns of the table displayed when viewing hosts :
+The table below gives a description of all the columns of the table displayed when viewing hosts:
 
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
 |   Column name            |   Description                                                                                                                    | 
@@ -166,7 +166,7 @@ The table below gives a description of all the columns of the table displayed wh
 Available filters
 -----------------
 
-You can filter the result presented via the following filters :
+You can filter the result presented via the following filters:
 
 * **Host** : can be used to filter by name of host via an SQL LIKE type search.
 * **Status** : can be used to filter by the status of hosts.
@@ -180,7 +180,7 @@ You can filter the result presented via the following filters :
 Host groups table
 =================
 
-The table below gives a description of all the columns of the table displays when of the viewing host groups :
+The table below gives a description of all the columns of the table displays when of the viewing host groups:
 
 +--------------------------+------------------------------------------------------------------------------------------------------------+
 |   Column name            |   Description                                                                                              | 
@@ -192,8 +192,8 @@ The table below gives a description of all the columns of the table displays whe
 | Etat des services        | Permet de visualiser le nombre de services ayant le statut OK, WARNING, CRITICAL ou PENDING                |
 +--------------------------+------------------------------------------------------------------------------------------------------------+
 
-Filtres disponibles
--------------------
+Available filters
+-----------------
 
 Vous pouvez filtrer le résultat présenté en sélectionnant dans la liste déroulante un collecteur.
 Seuls les hôtes du collecteur sélectionné seront affichés.
@@ -203,7 +203,7 @@ Détails d'un hôte
 
 Lorsque vous cliquez sur un hôte, la page suivante s'affiche :
 
-.. image :: /images/user/monitoring/04hostdetail.png
+.. image:: /images/user/monitoring/04hostdetail.png
    :align: center 
 
 Détails du statut
@@ -306,7 +306,7 @@ Visualisation
 
 Pour visualiser le statut des services, rendez-vous dans le menu **Supervision** ==> **Services**.
 
-.. image :: /images/user/monitoring/04servicelist.png
+.. image:: /images/user/monitoring/04servicelist.png
    :align: center 
 
 La barre de recherche grise permet de filtrer les résultats affichés.
@@ -317,37 +317,37 @@ Le menu de gauche permet de modifier les services visibles au sein du tableau :
 * Pour visualiser tous les services, cliquez sur **Tous les services**
 * Pour visualiser tous les services (classés par hôtes), quel que soit le statut, cliquez sur **Détails** (en dessous d'hôtes)
 
-.. image :: /images/user/monitoring/04servicelistbyhostdetail.png
+.. image:: /images/user/monitoring/04servicelistbyhostdetail.png
    :align: center
    
 * Pour visualiser le nombre de services (classés par hôtes et statuts), cliquez sur **Résumé** (en dessous d'hôtes)
 
-.. image :: /images/user/monitoring/04servicelistbyhost.png
+.. image:: /images/user/monitoring/04servicelistbyhost.png
    :align: center
   
 * Pour visualiser tous les services (classés par groupes d'hôtes), cliquez sur **Détails** (en dessous de groupe d'hôtes)
 
-.. image :: /images/user/monitoring/04servicelistbyhostgroupdetail.png
+.. image:: /images/user/monitoring/04servicelistbyhostgroupdetail.png
    :align: center
    
 * Pour visualiser le nombre de services (classés par groupes d'hôtes et statuts), cliquez sur **Résumé** (en dessous de groupe d'hôtes)
 
-.. image :: /images/user/monitoring/04servicelistbyhostgroup.png
+.. image:: /images/user/monitoring/04servicelistbyhostgroup.png
    :align: center
    
 * Pour visualiser tous les services (classés par groupes de services), cliquez sur **Détails** (en dessous de groupe de services)
 
-.. image :: /images/user/monitoring/04servicelistbyservicegroupdetail.png
+.. image:: /images/user/monitoring/04servicelistbyservicegroupdetail.png
    :align: center
    
 * Pour visualiser le nombre de services (classés par groupes de services et statuts), cliquez sur **Résumé** (en dessous de groupe de services)
 
-.. image :: /images/user/monitoring/04servicelistbyservicegroup.png
+.. image:: /images/user/monitoring/04servicelistbyservicegroup.png
    :align: center
 
 * Pour visualiser les méta-services, cliquez sur **Méta-Services**
 
-.. image :: /images/user/monitoring/04metaservices.png
+.. image:: /images/user/monitoring/04metaservices.png
    :align: center
 
 Tableaux de services
@@ -424,7 +424,7 @@ Détails d'un service
 
 Lorsque vous cliquez sur un service, la page suivante s'affiche :
 
-.. image :: /images/user/monitoring/04servicedetail.png
+.. image:: /images/user/monitoring/04servicedetail.png
    :align: center
 
 Détails du statut
@@ -541,7 +541,7 @@ Pour visualiser la file d'attente :
 #. Rendez-vous dans le menu **Supervision  ==> Hôtes** ou **Services**
 #. Dans le menu de gauche, sous **Moteur de supervision**, cliquez sur **File d'attente**
 
-.. image :: /images/user/monitoring/04waitingqueue.png
+.. image:: /images/user/monitoring/04waitingqueue.png
    :align: center
 
 Le tableau ci-dessous décrit les colonnes de cette page.
@@ -580,7 +580,7 @@ Pour visualiser les temps d'arrêts en cours sur les ressources :
 #. Rendez-vous dans le menu **Supervision** ==> **Hôtes** ou **Services**
 #. Dans le menu de gauche, sous **Moteur de supervision**, cliquez sur **Temps d'arrêt**
 
-.. image :: /images/user/monitoring/04downtimelist.png
+.. image:: /images/user/monitoring/04downtimelist.png
    :align: center
 
 Le tableau ci-dessous décrit les colonnes de cette page.
@@ -628,7 +628,7 @@ Pour visualiser les commentaires définis sur les ressources :
 #. Rendez-vous dans le menu **Supervision** ==> **Hôtes** ou **Services**
 #. Dans le menu de gauche, sous **Moteur de supervision** cliquez sur **Commentaires**
 
-.. image :: /images/user/monitoring/04comments.png
+.. image:: /images/user/monitoring/04comments.png
    :align: center
 
 Le tableau ci-dessous décrit les colonnes de cette page.

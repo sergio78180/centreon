@@ -168,7 +168,7 @@ Host Group widget
 * If the **Enable Detailed Mode** box is checked, all the host names and the services associated with these hosts will be displayed for the hostgroups selected
 * The **Results** list allows us to limit the number of results
 * The **Order By** lsit is used to classify the service in alphabetical order according to multiple settings
-* the **Refresh Interval (seconds)** field allows to define the time before data refreshment
+* The **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
 Service Group widget
 ====================
@@ -177,7 +177,7 @@ Service Group widget
 * If the **Enable Detailed Mode** box is checked, all the host names and the services associated with these hosts will be displayed for the service groups selected
 * The **Results** list allows us to limit the number of results
 * The **Order By** lsit is used to classify the service in alphabetical order according to multiple settings
-* the **Refresh Interval (seconds)** field allows to define the time before data refreshment
+* The **Refresh Interval (seconds)** field allows to define the time before data refreshment
 
 .. |deletewidget|    image:: /images/user/monitoring/deletewidget.png
 .. |configurewidget|    image:: /images/user/monitoring/configurewidget.png

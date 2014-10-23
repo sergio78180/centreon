@@ -14,20 +14,21 @@ To view the performance information of your scheduler:
 #. In the left menu, click on **Performance Info**
 #. Choose your scheduler in the drop-down list **Poller**
 
-.. image :: /images/user/monitoring/03statsordonnanceur.png
+.. image:: /images/user/monitoring/03statsordonnanceur.png
    :align: center 
 
 Multiple tables allows to view the performance of your schedulers:
 
 * The **Actively Checked** table can be used to view the number of hosts and services checked in the last minute, the last five minutes, the last quarter of an hour or the last hour.
 * The **Check Latency** table can be used to view the minimum, maximum and average latency time of the checks performed on the hosts and the services.
+
 .. warning::
-    The longer the latency time, the later are the checks in relation to the initial time programmed by the scheduler. This requires a high load potential by the server.
+    More than the latency is important and more than the execution of checks by the scheduler will be delayed. This implies a potential high server load.
 
 * The **Buffer Usage** table can be used to view the number of external commands awaiting processing by the scheduler.
 
 .. warning::
-    in the case of a passive monitoring injecting many external commands to the scheduler, it is necessary to check this value. If it is too close to the size limit it is possible to lose commands; consequently it is necessary to increase the size of the buffer.
+    In the case of a passive monitoring injecting many external commands to the scheduler, it is necessary to check this value. If it is too close to the size limit it is possible to lose commands; consequently it is necessary to increase the size of the buffer.
 
 * The **Status** table gives a brief view of the statuses of the hosts and services
 * The **Check Execution Time** table can be used to view the execution time of a probe, i.e. the time between when it is started and the moment when it transmits the information to the scheduler.
@@ -45,12 +46,12 @@ To view the statistics of Centreon Broker:
 #. In the left menu, click on **Broker Statistics**
 #. Choose your poller in the list entitled **Poller**
 
-.. image :: /images/user/monitoring/03statsbroker.png
+.. image:: /images/user/monitoring/03statsbroker.png
    :align: center 
 
 The performance of Centreon Broker is classified by entities of Centreon Broker (module scheduler, Broker-RRD, Broker-Central).
 
-For each entity, the Centreon web interface displays :
+For each entity, the Centreon web interface displays:
 
 * The list of loaded Centreo Broker modules
 * The input/output performance
@@ -58,9 +59,9 @@ For each entity, the Centreon web interface displays :
 Input/Output Performance
 ========================
 
-Each performance contains multiple data :
+Each performance contains multiple data:
 
-.. image :: /images/user/monitoring/03brokerperf.png
+.. image:: /images/user/monitoring/03brokerperf.png
    :align: center 
 
 * The **State** field contains the status of the input, of the output and the status of the module itself
@@ -74,23 +75,22 @@ Each performance contains multiple data :
 * The **Queued events** field indicates the number of events to be processed
 * The **File being read** field indicates the failover file in the progress of being read
 * The **Reading position (offset)** field indicates the reading position associated with the failover file
-* The **File being write** field indicates the failover file in the progress of being write
+* The **File being write** field indicates the failover file in the progress of being written
 * The **Write position (offset)** field indicates the writing position associated with the failover file
 * The **Max file size** field indicates the maximum size of the failover file
 * The **Failover** field indicates the associated temporary backup file
-
 
 ******
 Graphs
 ******
 
 It is also possible to view the performance of monitoring engines as performance graphs.
-For this :
+For this:
 
 #. Go to the menu **Home** ==> **Monitoring Engine Statistics**
 #. In the left menu, click on **Graphs**
 #. Choose your poller in the list entitled **Poller**
 #. Choose the period on which you want to view the performance graphs
 
-.. image :: /images/user/monitoring/03graphperf.png
+.. image:: /images/user/monitoring/03graphperf.png
    :align: center 
