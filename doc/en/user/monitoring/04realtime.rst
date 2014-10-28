@@ -117,7 +117,7 @@ Viewing
 
 To view the status of hosts, go into the menu **Monitoring** ==> **Hosts**.
 
-.. image:: images/01.png
+.. image:: /images/user/monitoring/04unhandledproblems.png
    :align: center
 
 The grey search bar can be used to filter the result displays.
@@ -185,70 +185,69 @@ The table below gives a description of all the columns of the table displays whe
 +--------------------------+------------------------------------------------------------------------------------------------------------+
 |   Column name            |   Description                                                                                              | 
 +==========================+============================================================================================================+
-| Groupes d'hôtes          | Liste l'ensemble des groupes d'hôtes                                                                       |
+| Host Group               | List of available groups of hosts                                                                          |
 +--------------------------+------------------------------------------------------------------------------------------------------------+
-| Etat des hôtes           | Permet de visualiser le nombre d'hôtes ayant le statut disponible, indisponible, injoignable ou en attente |
+| Hosts Status             | Allows to display the number of hosts in UP, DOWN, UNREACHABLE or in PENDING satus                         |
 +--------------------------+------------------------------------------------------------------------------------------------------------+
-| Etat des services        | Permet de visualiser le nombre de services ayant le statut OK, WARNING, CRITICAL ou PENDING                |
+| Services Status          |  Allows to display the number of services in OK, WARNING, CRITICAL or in PENDING status                    |
 +--------------------------+------------------------------------------------------------------------------------------------------------+
 
 Available filters
 -----------------
 
-Vous pouvez filtrer le résultat présenté en sélectionnant dans la liste déroulante un collecteur.
-Seuls les hôtes du collecteur sélectionné seront affichés.
+You can filters result by selecting poller in the select box. Only hosts monotored by poller will be displayed.
 
-Détails d'un hôte
-=================
+Host details
+============
 
-Lorsque vous cliquez sur un hôte, la page suivante s'affiche :
+When you click on a host, the following screen appears:
 
 .. image:: /images/user/monitoring/04hostdetail.png
    :align: center 
 
-Détails du statut
------------------
+Status details
+--------------
 
-Le tableau ci-dessous résume l'ensemble des attributs de cette partie :
+The table below summarizes the attributes of this part:
 
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-|   Attributs                              |   Description                                                                                       | 
+|   Attributes                             |   Description                                                                                       | 
 +==========================================+=====================================================================================================+
-| Statut de l'hôte                         | Affiche le statut de l'hôte                                                                         |
+| Host Status                              | Displays the status of the host                                                                     |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Statut détaillé                          | Affiche le message associé au statut de l'hôte                                                      |
+| Status information                       | Dispalys the information of the status of the host                                                  |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Données de performance                   | Affiche les données de performances renvoyées par la sonde                                          |
+| Performance Data                         | Displays performance data associated to the check                                                   |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Tentative                                | Affiche le nombre de tentative avant validation de l'état                                           |
+| Current Attempt                          | Displays the number of attempts before status validation                                            |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Type d'état                              | Affiche le type d'état ('SOFT' ou 'HARD')                                                           |
+| State Type                               | Displays the type of state ('SOFT' or 'HARD')                                                       |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Dernier contrôle                         | Affiche la date et l'heure du dernier contrôle effectué sur l'hôte                                  |
+| Last Check                               | Displays the last check of the host                                                                 |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Prochain contrôle                        | Affiche la date et l'heure du prochain contrôle effectué sur l'hôte                                 |
+| Next Check                               | Displays the next scheduled check of the host                                                       |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Latence                                  | Affiche le temps de latence entre la programmation de l'exécution et l'exécution réelle de la sonde |
+| Latency                                  | Displays the latency in seconds between the scheduled check and the real check execution            |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Temps d'exécution                        | Affiche le temps d'exécution de la sonde                                                            |
+| Execution Time                           | Displays the execution time of the check                                                            |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Changement du dernier état               | Affiche la date et l'heure depuis laquelle l'hôte est dans l'état actuel                            |
+| Last State Change                        | Displays when the status of the host changed                                                        |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Durée de l'état actuel                   | Affiche la durée depuis laquelle l'hôte est dans l'état actuel                                      |
+| Current State Duration                   | Displays the date and time from which the host is in the present state                              |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Dernier notification                     | Affiche la date et l'heure d'envoi de la dernière notification                                      |
+| Last Notification                        | Displays the sent date and time of the last notification                                            |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Prochaine notification                   | Affiche la date et l'heure d'envoi de la prochaine notification                                     |
+| Next Notification                        | Displays the sent date and time of the next notification                                            |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Numéro de notification actuel            | Affiche le nombre de notifications déjà envoyées                                                    |
+| Current Notification Number              | Displays the number of sent notifications                                                           |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Est\-ce que le statut de l'hôte bagote ? | Indique si l'hôte bagotte (a le statut FLAPPING)                                                    |
+| Is This Host Flapping?                   | Indicates if the host is in flapping state                                                          |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Pourcentage de changement de statut      | Affiche le pourcentage de changement d'état                                                         |
+| Percent State Change                     | Displays the percentage change of state                                                             |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Planification d'arrêt en cours?          | Indique si l'hôte est concerné par un temps d'arrêt                                                 |
+| In Scheduled Downtime?                   | Indicates if the host is in scheduled downtime                                                      |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Dernière mise à jour                     | Affiche la date et l'heure de la dernière mise à jour                                               |
+| Last Update                              | displays the date and time of the last information update                                           |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
 
 Options et Commandes disponibles
@@ -433,7 +432,7 @@ Détails du statut
 Le tableau ci-dessous résume l'ensemble des attributs de cette partie :
 
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-|   Attributs                               |   Description                                                                                       |
+|   Attributes                              |   Description                                                                                       |
 +===========================================+=====================================================================================================+
 | Statut du service                         | Affiche le statut du service                                                                        |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
