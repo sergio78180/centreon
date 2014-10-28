@@ -61,8 +61,8 @@ SOFT and HARD states
 
 A host or a service can have two states:
 
-* SOFT : Signifies that an incident has just been detected and that it has to be confirmed.
-* HARD : Signifies that the status of the incident is confirmed. Once the status is confirmed, the notification process is engaged (sending of a mail, SMS, etc.).
+* SOFT: Signifies that an incident has just been detected and that it has to be confirmed.
+* HARD: Signifies that the status of the incident is confirmed. Once the status is confirmed, the notification process is engaged (sending of a mail, SMS, etc.).
 
 Status confirmation
 ===================
@@ -75,20 +75,20 @@ Example:
 
 A service has the following check settings: 
 
-* Max check attempts : 3
-* Normal check interval : 5 minutes
-* Retry check interval : 1 minute
+* Max check attempts: 3
+* Normal check interval: 5 minutes
+* Retry check interval: 1 minute
  
-Let us imagine the following scenarii:
+Let us imagine the following scenario:
 
-* Instant t + 0 : The service is checked, it has the OK status.
-* Instant t + 5 : The second check shows that the service has the CRITICAL status. The service goes into the SOFT state (attempt 1/3).
-* Instant t + 6 : The third check is performed, the service still has the CRITICAL status in SOFT (attempt 2/3).
-* Instant t + 7 : The fourth check shows that the service still has the CRITICAL status (attempt 3/3). The number of tests has been completed; the state is configured (HARD). The notification process is triggered.
-* Instant t + 8 : The service recovers OK status. It goes directly into the HARD state. The notification process is triggered.
-* Instant t + 13 : The service has the WARNING status. It goes into the SOFT state (attempt 1/3).
-* Instant t + 14 : The service still has the WARNING status (attempt 2/3).
-* Instant t + 15 : The service has the CRITICAL status. It remains in the SOFT state because it has changed status.
+* Instant t + 0: The service is checked, it has the OK status.
+* Instant t + 5: The second check shows that the service has the CRITICAL status. The service goes into the SOFT state (attempt 1/3).
+* Instant t + 6: The third check is performed, the service still has the CRITICAL status in SOFT (attempt 2/3).
+* Instant t + 7: The fourth check shows that the service still has the CRITICAL status (attempt 3/3). The number of tests has been completed; the state is configured (HARD). The notification process is triggered.
+* Instant t + 8: The service recovers OK status. It goes directly into the HARD state. The notification process is triggered.
+* Instant t + 13: The service has the WARNING status. It goes into the SOFT state (attempt 1/3).
+* Instant t + 14: The service still has the WARNING status (attempt 2/3).
+* Instant t + 15: The service has the CRITICAL status. It remains in the SOFT state because it has changed status.
 
 ***************
 Generic actions
@@ -101,11 +101,11 @@ The table below summarises the functions of these icons:
 +------------+-----------------------------------------------------------------------+
 |   Icon     |   Description                                                         | 
 +============+=======================================================================+
-| |refresh|  | Serves to refresh the results manually                                |
+| |refresh|  | Serves to refresh the results manually.                               |
 +------------+-----------------------------------------------------------------------+
-| |pause|    | Serves to put the automatic data refreshment into pause               |
+| |pause|    | Serves to put the automatic data refreshment into pause.              |
 +------------+-----------------------------------------------------------------------+
-| |resume|   | Serves to restart automatic data refreshment                          |
+| |resume|   | Serves to restart automatic data refreshment.                         |
 +------------+-----------------------------------------------------------------------+
 
 *****
@@ -131,33 +131,33 @@ The left menu can be used to change the hosts visible in the table:
 .. image:: /images/user/monitoring/04hostgroup.png
    :align: center 
 
-Host tables
-===========
+Host' tables
+============
 
 The table below gives a description of all the columns of the table displayed when viewing hosts:
 
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
 |   Column name            |   Description                                                                                                                    | 
 +==========================+==================================================================================================================================+
-| S                        | Displays the severity level of the host                                                                                          |
+| S                        | Displays the severity level of the host.                                                                                         |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Hosts                    | Displays the name of the host..                                                                                                  |
+| Hosts                    | Displays the name of the host.                                                                                                   |
 |                          | The icon |nonotifications| indicates that the notifications for this host are disabled.                                          |
 |                          | The icon |graphperformances| can be used to view all the performance graphs for this host.                                       |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Status                   | Serves to view the status of the host                                                                                            |
+| Status                   | Serves to view the status of the host.                                                                                           |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| IP Address               | Indicates the IP address of the host                                                                                             |
+| IP Address               | Indicates the IP address of the host.                                                                                            |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Last Check               | Displays the date and the time of the last check                                                                                 |
+| Last Check               | Displays the date and the time of the last check.                                                                                |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Duration                 | Displays the time that the host a has kept its current status                                                                    |
+| Duration                 | Displays the time that the host a has kept its current status.                                                                   |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Hard State Duration      | Displays the time that the host a has kept its current hard state (does not appear when viewing of all the hosts)                |
+| Hard State Duration      | Displays the time that the host a has kept its current hard state (does not appear when viewing of all the hosts).               |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Tries                    | Displays the number of tries before confirming the state                                                                         |
+| Tries                    | Displays the number of tries before confirming the state.                                                                        |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
-| Status information       | Displays the message explaining the status of the host                                                                           |
+| Status information       | Displays the message explaining the status of the host.                                                                          |
 +--------------------------+----------------------------------------------------------------------------------------------------------------------------------+
 
 .. note::
@@ -168,11 +168,11 @@ Available filters
 
 You can filter the result presented via the following filters:
 
-* **Host** : can be used to filter by name of host via an SQL LIKE type search.
-* **Status** : can be used to filter by the status of hosts.
-* **Severity** : can be used to filter by severity.
-* **Poller** : can be used to filter the hosts by poller. Only the hosts of the poller selected will be displayed.
-* **Hostgroup** : can be used to filter by host group. Only the hosts of the host group selected will be displayed.
+* **Host**: can be used to filter by name of host via an SQL LIKE type search.
+* **Status**: can be used to filter by the status of hosts.
+* **Severity**: can be used to filter by severity.
+* **Poller**: can be used to filter the hosts by poller. Only the hosts of the poller selected will be displayed.
+* **Hostgroup**: can be used to filter by host group. Only the hosts of the host group selected will be displayed.
 
 .. note::
     The search on text fields only starts after entry of at least 3 characters.
@@ -185,17 +185,17 @@ The table below gives a description of all the columns of the table displays whe
 +--------------------------+------------------------------------------------------------------------------------------------------------+
 |   Column name            |   Description                                                                                              | 
 +==========================+============================================================================================================+
-| Host Group               | List of available groups of hosts                                                                          |
+| Host Group               | List of available groups of hosts.                                                                         |
 +--------------------------+------------------------------------------------------------------------------------------------------------+
-| Hosts Status             | Allows to display the number of hosts in UP, DOWN, UNREACHABLE or in PENDING satus                         |
+| Hosts Status             | Allows to display the number of hosts in UP, DOWN, UNREACHABLE or in PENDING status.                       |
 +--------------------------+------------------------------------------------------------------------------------------------------------+
-| Services Status          |  Allows to display the number of services in OK, WARNING, CRITICAL or in PENDING status                    |
+| Services Status          |  Allows to display the number of services in OK, WARNING, CRITICAL or in PENDING status.                   |
 +--------------------------+------------------------------------------------------------------------------------------------------------+
 
 Available filters
 -----------------
 
-You can filters result by selecting poller in the select box. Only hosts monotored by poller will be displayed.
+You can filter result by selecting poller in the select box. Only hosts monitored by poller will be displayed.
 
 Host details
 ============
@@ -213,452 +213,448 @@ The table below summarizes the attributes of this part:
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
 |   Attributes                             |   Description                                                                                       | 
 +==========================================+=====================================================================================================+
-| Host Status                              | Displays the status of the host                                                                     |
+| Host Status                              | Displays the status of the host.                                                                    |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Status information                       | Dispalys the information of the status of the host                                                  |
+| Status information                       | Displays the information of the status of the host.                                                 |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Performance Data                         | Displays performance data associated to the check                                                   |
+| Performance Data                         | Displays performance data associated to the check.                                                  |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Current Attempt                          | Displays the number of attempts before status validation                                            |
+| Current Attempt                          | Displays the number of attempts before status validation.                                           |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| State Type                               | Displays the type of state ('SOFT' or 'HARD')                                                       |
+| State Type                               | Displays the type of state ('SOFT' or 'HARD').                                                      |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Last Check                               | Displays the last check of the host                                                                 |
+| Last Check                               | Displays the last check of the host.                                                                |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Next Check                               | Displays the next scheduled check of the host                                                       |
+| Next Check                               | Displays the next scheduled check of the host.                                                      |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Latency                                  | Displays the latency in seconds between the scheduled check and the real check execution            |
+| Latency                                  | Displays the latency in seconds between the scheduled check and the real check execution.           |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Execution Time                           | Displays the execution time of the check                                                            |
+| Execution Time                           | Displays the execution time of the check.                                                           |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Last State Change                        | Displays when the status of the host changed                                                        |
+| Last State Change                        | Displays when the status of the host changed.                                                       |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Current State Duration                   | Displays the date and time from which the host is in the present state                              |
+| Current State Duration                   | Displays the date and time from which the host is in the present state.                             |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Last Notification                        | Displays the sent date and time of the last notification                                            |
+| Last Notification                        | Displays the sent date and time of the last notification.                                           |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Next Notification                        | Displays the sent date and time of the next notification                                            |
+| Next Notification                        | Displays the sent date and time of the next notification.                                           |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Current Notification Number              | Displays the number of sent notifications                                                           |
+| Current Notification Number              | Displays the number of sent notifications.                                                          |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Is This Host Flapping?                   | Indicates if the host is in flapping state                                                          |
+| Is This Host Flapping?                   | Indicates if the host is in flapping state.                                                         |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Percent State Change                     | Displays the percentage change of state                                                             |
+| Percent State Change                     | Displays the percentage change of state.                                                            |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| In Scheduled Downtime?                   | Indicates if the host is in scheduled downtime                                                      |
+| In Scheduled Downtime?                   | Indicates if the host is in scheduled downtime.                                                     |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Last Update                              | displays the date and time of the last information update                                           |
+| Last Update                              | Displays the date and time of the last information update.                                          |
 +------------------------------------------+-----------------------------------------------------------------------------------------------------+
 
-Options et Commandes disponibles
---------------------------------
+Options and controls available
+------------------------------
 
-Les options ainsi que les commandes permettent d'effectuer un certain nombre d'actions sur l'hôte.
-Ces différentes options sont traitées au sein du :ref:`guide d'exploitation<exploitationguide>`.
+Options and controls allow you to perform a number of actions on the host.
+Options are described in the chapter :ref:`Exploitation guide<exploitationguide>`.
 
 .. _shorthostlinks:
 
-Raccourcis d'hôtes
-------------------
+Host Shortcuts
+--------------
 
-Le tableau ci-dessous résume la signification des icônes :
+The table below summarizes the meaning of icons:
  
 +------------------------+--------------------------------------------------------------------+
-|  Icône                 |  Description                                                       | 
+|  Icons                 |  Description                                                       | 
 +========================+====================================================================+
-| |configure|            | Redirige vers la page de configuration de l'hôte                   |
+| |configure|            | Allows to access to host's configuration page                      |
 +------------------------+--------------------------------------------------------------------+
-| |showservicesstatuts|  | Affiche le statut de tous les services liés à l'hôte               |
+| |showservicesstatuts|  | Allows to display all the status of services linked to the host    |
 +------------------------+--------------------------------------------------------------------+
-| |showlogs|             | Affiche les journaux liés à l'hôte                                 |
+| |showlogs|             | Allows to display host's event logs                                |
 +------------------------+--------------------------------------------------------------------+
-| |showresult|           | Affiche le rapport de disponibilité lié à l'hôte                   |
+| |showresult|           | Allows to display host's availability reporting                    |
 +------------------------+--------------------------------------------------------------------+
-| |showgraphperf|        | Affiche les graphiques de performances des services liés à l'hôte  |
+| |showgraphperf|        | Allows to display performance graphs of all services of the host   |
 +------------------------+--------------------------------------------------------------------+
 
-Outils
+Tools
 ------
 
-Le conteneur **Outils** permet :
+The **Tools** box allows:
 
-* D'effectuer un PING vers l'hôte
-* D'effectuer un traceroute vers l'hôte
+* make a PING to the host
+* make a traceroute to the host
 
-Liens
------
+Links
+------
 
-Le conteneur **Liens** permet de visualiser les groupes d'hôtes auxquels l'hôte appartient.
+The **Links** container allows to display the hostgroups linked to the host.
 
 Notifications
 -------------
 
-Le conteneur **Notifications** permet de visualiser quels sont les contacts et les groupes de contacts qui seront alertés
-en cas d'envoi d'une notification.
+The **Notifications** container allows to display the contacts and contactgroups linked to the host which will receive notifications.
 
 ********
 Services
 ********
 
-Visualisation
-=============
+Viewing
+=======
 
-Pour visualiser le statut des services, rendez-vous dans le menu **Supervision** ==> **Services**.
+To view the status of hosts, go into the menu **Supervision** ==> **Services**.
 
 .. image:: /images/user/monitoring/04servicelist.png
    :align: center 
 
-La barre de recherche grise permet de filtrer les résultats affichés.
-Le menu de gauche permet de modifier les services visibles au sein du tableau :
+The grey search bar can be used to filter the result displays.
+The left menu can be used to change the hosts visible in the table:
 
-* Pour visualiser les services rencontrant un problème validé (état "HARD") mais étant non acquittés, cliquez sur **Problèmes non acquittés**
-* Pour visualiser tous les services rencontrant un problème (validé ou non, acquittés ou non), cliquez sur **Problèmes en cours**
-* Pour visualiser tous les services, cliquez sur **Tous les services**
-* Pour visualiser tous les services (classés par hôtes), quel que soit le statut, cliquez sur **Détails** (en dessous d'hôtes)
+* To view the services' problems but not acknowledged, click on **Unhandled Problems**
+* To view all the services in non-OK status, click on **Services Problems**
+* To view all the services, click on **All Services**
+
+* To view all services (short by host) in any status, click on **Details** (under **By Host** menu)
 
 .. image:: /images/user/monitoring/04servicelistbyhostdetail.png
    :align: center
-   
-* Pour visualiser le nombre de services (classés par hôtes et statuts), cliquez sur **Résumé** (en dessous d'hôtes)
+
+* To view the number of services (short by host and by status), click on **Summary** (under **By Host** menu)
 
 .. image:: /images/user/monitoring/04servicelistbyhost.png
    :align: center
-  
-* Pour visualiser tous les services (classés par groupes d'hôtes), cliquez sur **Détails** (en dessous de groupe d'hôtes)
+
+* To view the all services (short by host's groups) in any status, click on **Details** (under **By Host Group** menu)
 
 .. image:: /images/user/monitoring/04servicelistbyhostgroupdetail.png
    :align: center
-   
-* Pour visualiser le nombre de services (classés par groupes d'hôtes et statuts), cliquez sur **Résumé** (en dessous de groupe d'hôtes)
+
+* To view the number of services (short by host's groups), click on **Summary** (under **By Host Group** menu)
 
 .. image:: /images/user/monitoring/04servicelistbyhostgroup.png
    :align: center
-   
-* Pour visualiser tous les services (classés par groupes de services), cliquez sur **Détails** (en dessous de groupe de services)
+
+* To view the all services (short by services' groups), click on **Details** (under **By Service Group** menu)
 
 .. image:: /images/user/monitoring/04servicelistbyservicegroupdetail.png
    :align: center
    
-* Pour visualiser le nombre de services (classés par groupes de services et statuts), cliquez sur **Résumé** (en dessous de groupe de services)
+* To view the number of services (short by services' groups), click on **Summary** (under **By Service Group** menu)
 
 .. image:: /images/user/monitoring/04servicelistbyservicegroup.png
    :align: center
 
-* Pour visualiser les méta-services, cliquez sur **Méta-Services**
+* To view the meta services, click on **Meta Services**
 
 .. image:: /images/user/monitoring/04metaservices.png
    :align: center
 
-Tableaux de services
-====================
+Services' table
+===============
 
-Le tableau ci-dessous décrit les colonnes affichées lors de la visualisation des services.
+The table below gives a description of all the columns of the table displayed when viewing services:
 
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
-|  Nom de la colonne |   Description                                                                                                           | 
+|  Column name       |   Description                                                                                                           | 
 +====================+=========================================================================================================================+
-| S                  | Affiche le niveau de criticité du service                                                                               |
+| S                  | Displays the severity level of the service.                                                                             |
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Hôtes              | Affiche le nom de l'hôte. L'icône |url_link| permet d'accéder à une page web décrivant l'hôte                           |
+| Host               | Displays the name of host. The |url_link| icon allows to access to host's page details.                                 |
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Services           | Affiche le nom du service. L'icône |nonotifications| indique que les notifications pour ce service sont désactivées.    |
-|                    | L'icône |graphperformances| permet de visualiser le graphique de performance lié à ce service.                          |
-|                    | L'icône |url_link| permet d'accéder à une page web décrivant le service                                                 |
+| Services           | Displays the name of service. The |nonotifications| icon indicates that notifications are disabled for this service.    |
+|                    | The |graphperformances| icon Allows to display performance graphs of the service.                                       |
+|                    | The |url_link| icon allows to access to service's page details.                                                         |
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Validé depuis      | Affiche la durée depuis laquelle le service a conservé son statut actuel                                                |
+| Duration           | Displays the duration of the actual status.                                                                             |
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Dernier contrôle   | Affiche la date et l'heure du dernier contrôle effectué                                                                 |
+| Last Check         | Displays the date and time of the last check.                                                                           |
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Tentatives         | Affiche le nombre de tentatives effectuées pour valider l'état                                                          |
+| Tries              | Displays the number of attempts before status validation.                                                               |
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
-| Statut détaillé    | Affiche le message expliquant le statut du service                                                                      |
+| Status information | Displays the message explaining the status of the service.                                                              |
 +--------------------+-------------------------------------------------------------------------------------------------------------------------+
 
 .. note::
-    La colonne criticité ainsi que le filtre associé apparaissent si au moins un objet affiché possède un niveau de criticité.
+    The severity column and the associated filter appear if at least one object displayed has a severity level.
 
 .. note::
-    La colonne **Validé depuis** n'apparait pas lors de la sélection du menu contextuel **Tous les services**.
+    The **Hard State Duration** doesn't appear in **All Services** menu.
 
-Tableaux des groupes
-====================
+Tables of objects' groups
+=========================
 
-Le tableau ci-dessous décrit les colonnes affichées lors de la visualisation des services classés par groupes.
+The table below gives a description of all the columns of the table of services sorted by groups:
 
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-|   Nom de la colonne          |   Description                                                                                                                        | 
+|  Column name                 |   Description                                                                                                                        | 
 +==============================+======================================================================================================================================+
-| Hôtes ou Groupes d'hôtes     | Liste l'ensemble des hôtes ou hôtes séparés par des groupes d'hôtes ou hôtes séparées par des groupes de services                    |
-| Hôtes ou Groupes de services | L'icône |showservices| permet de visualiser l'ensemble des services liés à l'hôte                                                    |
-| Hôtes                        | L'icône |graphperformances| permet de visualiser l'ensemble des graphiques de performances liés aux services appartenant à l'hôte    |
+| Host or Host Groups          | Allows to display hosts or hosts linked to hostgroups or hosts linked to servicegroups.                                              |
+| Hosts or Service Group       | The |showservices| icon allows to display all services linked to the host.                                                           |
+| Hosts                        | The |graphperformances| icon allows to display all performance graphs of services linked to the host.                                |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| Statut                       | Affiche le statut de l'hôte                                                                                                          |
+| Status                       | Displays the status of the host.                                                                                                     |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
-| Informations sur les services| Affiche le statut des services (Mode détaillé) ou le nombre de services classés par statut (Mode résumé)                             |
+| Services information         | Displays the status of services (**details** mode) or the number of services classified by status (**summary** mode).                |
 +------------------------------+--------------------------------------------------------------------------------------------------------------------------------------+
 
-Tableaux des méta-services
-==========================
-
-Le tableau ci-dessous décrit les colonnes affichées lors de la visualisation des méta-services.
-
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-|   Nom de la colonne      |   Description                                                                                                                            | 
-+==========================+==========================================================================================================================================+
-| Méta\-Services           | Affiche le nom du méta\-service. L'icône |graphperformances| permet de visualiser le graphique de performance lié à ce méta\-service.    |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Statut                   | Affiche le statut du méta\-service                                                                                                       |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Durée                    | Affiche la durée depuis laquelle le méta\-service n'a pas changé de statut                                                               |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Dernier contrôle         | Affiche la date et l'heure du dernier contrôle                                                                                           |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Tentative                | Affiche le nombre de tentatives pour valider l'état                                                                                      |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-| Statut détaillé          | Affiche le message lié au statut                                                                                                         |
-+--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
-
-Détails d'un service
+Meta Services' table
 ====================
 
-Lorsque vous cliquez sur un service, la page suivante s'affiche :
+The table below gives a description of all the columns of the table of meta services:
+
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+|  Column name             |   Description                                                                                                                            |
++==========================+==========================================================================================================================================+
+| Meta Services            | Displays the name of the meta service. The |graphperformances| icon allows to display performance graphs linked to the meta service.     |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Status                   | Displays the status of the meta service.                                                                                                 |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Duration                 | Displays the duration of the actual status.                                                                                              |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Last Check               | Displays the date and time of the last check.                                                                                            |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Tries                    | Displays the number of attempts before status validation.                                                                                |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+| Status information       | Displays the message explaining the status of the service.                                                                               |
++--------------------------+------------------------------------------------------------------------------------------------------------------------------------------+
+
+Service details
+===============
+
+When you click on a service, the following screen appears:
 
 .. image:: /images/user/monitoring/04servicedetail.png
    :align: center
 
-Détails du statut
------------------
+Status details
+--------------
 
-Le tableau ci-dessous résume l'ensemble des attributs de cette partie :
+The table below summarizes the attributes of this part:
 
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
 |   Attributes                              |   Description                                                                                       |
 +===========================================+=====================================================================================================+
-| Statut du service                         | Affiche le statut du service                                                                        |
+| Service Status                            | Displays the status of the service.                                                                 |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Statut détaillé                           | Affiche le message associé au statut du service                                                     |
+| Status information                        | Displays the information of the status of the service.                                              |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Informations d'état étendues              | Affiche le message long ("long output") associé au statut du service                                |
+| Extended status information               | Displays long output of the service.                                                                |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Données de performance                    | Affiche les données de performances renvoyées par la sonde                                          |
+| Performance Data                          | Displays performance data associated to the check.                                                  |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Tentative                                 | Affiche le nombre de tentative en cours pour valider l'état                                         |
+| Current Attempt                           | Displays the number of attempts before status validation.                                           |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Type d'état                               | Affiche le type d'état ('SOFT' ou 'HARD')                                                           |
+| State Type                                | Displays the type of state ('SOFT' or 'HARD').                                                      |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Dernier contrôle                          | Affiche la date et l'heure du dernier contrôle effectué sur le service                              |
+| Last Check Type                           | Indicates if the last type of check is 'active' or 'passive'.                                       |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Prochain contrôle                         | Affiche la date et l'heure du prochain contrôle effectué sur le service                             |
+| Last Check                                | Displays the last check of the service.                                                             |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Latence                                   | Affiche le temps de latence entre la programmation de l'exécution et son exécution réelle           |
+| Next Scheduled Active Check               | Displays the next scheduled check of the service.                                                   |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Temps d'exécution                         | Affiche le temps d'éxécution de la sonde                                                            |
+| Latency                                   | Displays the latency in seconds between the scheduled check and the real check execution.           |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Changement du dernier état                | Affiche la date et l'heure depuis laquelle le service est dans l'état actuel                        |
+| Check Duration                            | Displays the execution time of the check.                                                           |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Durée de l'état actuel                    | Affiche la durée depuis laquelle le service est dans l'état actuel                                  |
+| Last State Change                         | Displays when the status of the service changed.                                                    |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Dernier notification                      | Affiche la date et l'heure d'envoi de la dernière notification                                      |
+| Current State Duration                    | Displays the date and time from which the host is in the present state.                             |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Numéro de notification actuel             | Affiche le nombre de notifications déjà envoyées                                                    |
+| Last Service Notification                 | Displays the sent date and time of the last notification.                                           |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Est\-ce que le statut du service bagote ? | Indique si le service bagotte (statut FLAPPING)                                                     |
+| Current Notification Number               | Displays the number of sent notifications.                                                          |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Pourcentage de changement de statut       | Affiche le pourcentage de changement d'état                                                         |
+| Is This Service Flapping?                 | Indicates if the service is in flapping state.                                                      |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Planification d'arrêt en cours?           | Indique si le service est concerné par un temps d'arrêt                                             |
+| Percent State Change                      | Displays the percentage change of state.                                                            |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
-| Dernière mise à jour                      | Affiche la date et l'heure de la dernière mise à jour                                               |
+| In Scheduled Downtime?                    | Indicates if the host is in scheduled downtime.                                                     |
++-------------------------------------------+-----------------------------------------------------------------------------------------------------+
+| Last Update                               | Displays the date and time of the last information update.                                          |
 +-------------------------------------------+-----------------------------------------------------------------------------------------------------+
 
-Options et commandes du service
+Options and controls available
+------------------------------
+
+Options and controls allow you to perform a number of actions on the host. Options are described in the chapter :ref:`Exploitation guide<exploitationguide>`.
+
+Detailed graph and status graph
 -------------------------------
 
-Les options ainsi que les commandes du service permettent d'effectuer un certain nombre d'actions sur le service.
-Ces différentes options sont traitées au sein du :ref:`guide d'exploitation<exploitationguide>`.
+The **Detailed Graph** and **Status Graph** allow to display performance graphs and the history chart statutes for this service.
 
-Graphique détaillé et graphiques des statuts
---------------------------------------------
+Host Shortcuts
+--------------
 
-Les parties **Graphique détaillé** et **Graphique des statuts** permettent respectivement de visualiser le graphique de performance 
-ainsi que le graphique d'historique de statuts pour ce service.
+The host shortcuts are the same than as those from :ref:`host's details page<shorthostlinks>`.
 
-Raccourcis d'hôte
------------------
+Service Shortcut
+----------------
 
-Les raccourcis d'hôtes sont les mêmes que ceux de la fiche :ref:`d'hôte<shorthostlinks>`.
-
-Raccourcis de service
----------------------
-
-Le tableau ci-dessous résume la signification des icônes :
+The table below summarizes the meaning of icons:
  
 +------------------------+--------------------------------------------------------------------+
-|  Icône                 |  Description                                                       | 
+|  Icons                 |  Description                                                       | 
 +========================+====================================================================+
-| |configure|            | Redirige vers la page de configuration du service                  |
+| |configure|            | Allows to access to service’s configuration page                   |
 +------------------------+--------------------------------------------------------------------+
-| |showservicesstatuts|  | Affiche le statut de tous les services liés à l'hôte               |
+| |showservicesstatuts|  | Allows to display all the status of services linked to the host    |
 +------------------------+--------------------------------------------------------------------+
-| |showlogs|             | Affiche les journaux liés au service                               |
+| |showlogs|             | Allows to display services event logs                              |
 +------------------------+--------------------------------------------------------------------+
-| |showresult|           | Affiche le rapport de disponibilité lié au service                 |
+| |showresult|           | Allows to display host’s availability reporting                    |
 +------------------------+--------------------------------------------------------------------+
 
-Liens
+Links
 -----
 
-Le conteneur **Liens** permet de visualiser :
+The **Links** container allows to display:
 
-* Les groupes d'hôtes auxquels l'hôte contenant le service appartient
-* Les groupes de services auxquels le service appartient
-* Les catégories de services auxquels le service appartient
+* The groups of hosts which this service is linked.
+* The groups of services which this service is linked.
+* The categories of services which this service is linked.
 
 Notifications
 -------------
 
-Le conteneur **Notifications** permet de visualiser quels sont les contacts et les groupes de contacts qui seront alertés
-en cas d'envoi d'une notification.
+The **Notifications** container allows to display the contacts and contactgroups linked to the host which will receive notifications.
 
-**********************
-Moteurs de supervision
-**********************
+*****************
+Monitoring Engine
+*****************
 
-Ce menu contextuel permet de visualiser des informations complémentaires telles que la file d'attente des contrôles prévus 
-par l'ordonnanceur, les commentaires ou les temps d'arrêt ajoutés aux objets .
+This part allows to display information about monitoring scheduling queue, comments or downtimes of objects.
 
 .. note::
-	Pour plus d'informations sur les commentaires ou sur les temps d'arrêt, rendez-vous dans le :ref:`guide d'exploitation<exploitationguide>`.
+	For more information about comments and downtimes please see :ref:`Exploitation guide<exploitationguide>` chapter.
 
-File d'attente
-==============
+Scheduling Queue
+================
 
-La file d'attente présente l'ordonnancement prévu des contrôles à réaliser par les ordonnanceurs de supervision.
+To visualize scheduling queue:
 
-Pour visualiser la file d'attente :
-
-#. Rendez-vous dans le menu **Supervision  ==> Hôtes** ou **Services**
-#. Dans le menu de gauche, sous **Moteur de supervision**, cliquez sur **File d'attente**
+#. Go to the menu **Monitoring** ==> **Hosts** or **Services**
+#. In the left menu, under **Monitoring Engine**, click on **Scheduling Queue**
 
 .. image:: /images/user/monitoring/04waitingqueue.png
    :align: center
 
-Le tableau ci-dessous décrit les colonnes de cette page.
+The table below gives a description of all the columns:
 
 +--------------------+-------------------------------------------------+
-|  Nom de la colonne |   Description                                   |
+|  Column name       |   Description                                   |
 +====================+=================================================+
-| Hôtes              | Indique le nom de l'hôte                        |
+| Hosts              | Displays the name of host.                      |
 +--------------------+-------------------------------------------------+
-| Services           | Indique le nom du service                       |
+| Services           | Displays the name of service.                   |
 +--------------------+-------------------------------------------------+
-| Dernier contrôle   | Affiche la date et l'heure du dernier contrôle  |
+| Last Check         | Displays the date and time of last check.       |
 +--------------------+-------------------------------------------------+
-| Prochain contrôle  | Affiche la date et l'heure du prochain contrôle |
+| Next Check         | Displays the date and time of next check.       |
 +--------------------+-------------------------------------------------+
-| Contrôle actif     | Indique si le contrôle est actif et/ou passif   |
+| Active Check       | Indicates if the checks are active or passive.  |
 +--------------------+-------------------------------------------------+
 
-Filtres disponibles
--------------------
+Available filters
+-----------------
 
-Vous pouvez filtrer le résultat présenté via les filtres suivants :
+You can filter the result presented via the following filters:
 
-* **Hôte** : permet de filtrer par nom d'hôte via une recherche de type SQL LIKE.
-* **Service** : permet de filtrer par le nom du service.
-* **Collecteur** : permet de filtrer par ordonnanceur. Seules les ressources supervisées par cet ordonnanceur seront affichées.
+* **Host**: can be used to filter by name of host via an SQL LIKE type search.
+* **Service**: can be used to filter by name of service  via an SQL LIKE type search.
+* **Poller**: can be used to filter the hosts by poller. Only the hosts of the poller selected will be displayed.
 
 .. note::
-    La recherche sur les champs texte ne commence qu'à partir de la saisie du troisième caractère.
+    The search on text fields only begins entering the third character.
 
-Les temps d'arrêts
-==================
+Downtime
+========
 
-Pour visualiser les temps d'arrêts en cours sur les ressources :
+To visualize downtimes:
 
-#. Rendez-vous dans le menu **Supervision** ==> **Hôtes** ou **Services**
-#. Dans le menu de gauche, sous **Moteur de supervision**, cliquez sur **Temps d'arrêt**
+#. Go to the menu **Monitoring** ==> **Hosts** or **Services**
+#. In the left menu, under **Monitoring Engine**, click on **Downtime**
 
 .. image:: /images/user/monitoring/04downtimelist.png
    :align: center
 
-Le tableau ci-dessous décrit les colonnes de cette page.
+The table below gives a description of all the columns:
 
-+------------------------------------------------+---------------------------------------------------+
-|  Nom de la colonne                             |   Description                                     | 
-+================================================+===================================================+
-| Nom de l'hôte                                  | Indique le nom de l'hôte                          |
-+------------------------------------------------+---------------------------------------------------+
-| Service (si on utilise la page Services)       | Affiche le service concerné par le temps d'arrêt  |
-+------------------------------------------------+---------------------------------------------------+
-| Date et heure de début et Date et heure de fin | Affiche la date et l'heure de début et de fin     |
-+------------------------------------------------+---------------------------------------------------+
-| Durée                                          | Affiche la durée du temps d'arrêt                 |
-+------------------------------------------------+---------------------------------------------------+
-| Auteur                                         | Affiche la personne ayant ajouté ce temps d'arrêt |
-+------------------------------------------------+---------------------------------------------------+
-| Commentaires                                   | Affiche le raison du temps d'arrêt                |
-+------------------------------------------------+---------------------------------------------------+
-| Démarré                                        | Indique si le temps d'arrêt est en cours ou non   |
-+------------------------------------------------+---------------------------------------------------+
-| Fixe                                           | Indique si le temps d'arrêt est fixe ou non       |
-+------------------------------------------------+---------------------------------------------------+
++------------------------------------------------+---------------------------------------------------------+
+|  Column name                                   |   Description                                           | 
++================================================+=========================================================+
+| Host Name                                      | Indicates the name of host.                             |
++------------------------------------------------+---------------------------------------------------------+
+| Services (only available of services page)     | Indicates the name of service.                          |
++------------------------------------------------+---------------------------------------------------------+
+| Start Time and End Time                        | Displays the start and end date and time.               |
++------------------------------------------------+---------------------------------------------------------+
+| Duration                                       | Displays the duration of the downtime.                  |
++------------------------------------------------+---------------------------------------------------------+
+| Author                                         | Displays the name of user who set the downtime.         |
++------------------------------------------------+---------------------------------------------------------+
+| Comments                                       | Displays the comments linked to the downtime.           |
++------------------------------------------------+---------------------------------------------------------+
+| Started                                        | Indicates if the downtime is started or not.            |
++------------------------------------------------+---------------------------------------------------------+
+| Fixed                                          | Indicates if the start and end datetime if fixe or not. |
++------------------------------------------------+---------------------------------------------------------+
 
-Filtres disponibles
--------------------
+Available filters
+-----------------
 
-Vous pouvez filtrer le résultat présenté via les filtres suivants :
+You can filter the result presented via the following filters:
 
-* **Nom de l'hôte** : permet de filtrer par nom d'hôte via une recherche de type SQL LIKE.
-* **Service** : permet de filtrer par le nom du service.
-* **Statut détaillé** : permet de filtrer par le statut détaillé des services.
-* **Auteur** : permet de filtrer par utilisateur ayant créé des commentaires.
-* **Afficher les temps d'arrêt terminés** : permet d'afficher en plus les temps d'arrêt terminés.
-* **Afficher les temps d'arrêt récurrents** : permet d'afficher les temps d'arrêts récurrents.
+* **Host**: can be used to filter by name of host via an SQL LIKE type search.
+* **Service**: can be used to filter by name of service  via an SQL LIKE type search.
+* **Output**: can be used to filter by output of services.
+* **Author**: can be used to filter by author.
+* **Display Finished Downtime**: allows to display recurring finished downtime.
+* **Display Downtime Cycle**: allows to display recurring downtime.
 
 .. note::
-    La recherche sur les champs texte ne commence qu'à partir de la saisie du troisième caractère.
+    The search on text fields only begins entering the third character.
 
-Les commentaires
-================
+Comments
+========
 
-Pour visualiser les commentaires définis sur les ressources :
+To visualize comments:
 
-#. Rendez-vous dans le menu **Supervision** ==> **Hôtes** ou **Services**
-#. Dans le menu de gauche, sous **Moteur de supervision** cliquez sur **Commentaires**
+#. Go to the menu **Monitoring** ==> **Hosts** or **Services**
+#. In the left menu, under **Monitoring Engine**, click on **Comments**
 
 .. image:: /images/user/monitoring/04comments.png
    :align: center
 
-Le tableau ci-dessous décrit les colonnes de cette page.
+The table below gives a description of all the columns:
 
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
-|  Nom de la colonne                                                |   Description                                                          | 
-+===================================================================+========================================================================+
-| Nom de l'hôte                                                     | Indique le nom de l'hôte                                               |
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
-| Service (si on utilise la page Services)                          | Affiche le service concerné par le commentaire                         |
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
-| Date de saisie                                                    | Affiche la date et l'heure où le commentaire a été saisi               |
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
-| Auteur                                                            | Affiche la personne ayant ajouté ce commentaire                        |
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
-| Commentaires                                                      | Affiche le contenu du commentaire                                      |
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
-| Acquittement persistant en cas de redémarrage de l'ordonnanceur   | Indique si le commentaire reste après le redémarrage de l'ordonnanceur |
-+-------------------------------------------------------------------+------------------------------------------------------------------------+
++-------------------------------------------------------------------+-----------------------------------------------------------------------------+
+|  Column name                                                      |   Description                                                               | 
++===================================================================+=============================================================================+
+| Host Name                                                         | Indicates the name of host.                                                 |
++-------------------------------------------------------------------+-----------------------------------------------------------------------------+
+| Services (only available of services page)                        | Indicates the name of service.                                              |
++-------------------------------------------------------------------+-----------------------------------------------------------------------------+
+| Entry Time                                                        | Displays the date and time when comment had been written.                   |
++-------------------------------------------------------------------+-----------------------------------------------------------------------------+
+| Author                                                            | Displays the name of user who set the comment.                              |
++-------------------------------------------------------------------+-----------------------------------------------------------------------------+
+| Comments                                                          | Displays the content of the comment.                                        |
++-------------------------------------------------------------------+-----------------------------------------------------------------------------+
+| Persistent                                                        | Indicates if the comment is persistent when the monitoring engine restarts. |
++-------------------------------------------------------------------+-----------------------------------------------------------------------------+
 
-Filtres disponibles
--------------------
+Available filters
+-----------------
 
-Vous pouvez filtrer le résultat présenté via les filtres suivants :
+You can filter the result presented via the following filters:
 
-* **Nom de l'hôte** : permet de filtrer par nom d'hôte via une recherche de type SQL LIKE.
-* **Service** : permet de filtrer par le nom du service.
-* **Statut détaillé** : permet de filtrer par le statut détaillé des services.
+* **Host**: can be used to filter by name of host via an SQL LIKE type search.
+* **Service**: can be used to filter by name of service  via an SQL LIKE type search.
+* **Output**: can be used to filter by output of services.
 
 .. note::
-    La recherche sur les champs texte ne commence qu'à partir de la saisie du troisième caractère.
+    The search on text fields only begins entering the third character.
 
 .. |pause|    image:: /images/pause.png
 .. |refresh|    image:: /images/refresh.png
