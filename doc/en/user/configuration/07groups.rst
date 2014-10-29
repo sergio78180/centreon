@@ -53,6 +53,8 @@ To add a service group:
 * The **Linked Service Templates** list allows to deploy a service based on this template on all hosts linked to this group.
 * The **Status** and **Comments** fields allow to enable or disable the service group and to make comment on it.
 
+.. _contactgroups:
+
 **************
 Contact Groups
 **************
