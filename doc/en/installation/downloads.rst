@@ -21,7 +21,7 @@ If your platform does not support RPM packages, you should use archives containi
 The last format available is oriented for developers or beta-testers. No official help can be provided on these software versions considered to be in the process of development.
 
 .. note::
- Merethis recommends using the Centreon Enterprise Server packaged version. Installation is detailed in the chapter entitled: :ref: `First steps with CES 3.0<firststepsces3>`
+ Merethis recommends using the Centreon Enterprise Server packaged version. Installation is detailed in the chapter entitled: :ref:`First steps with CES 3.0<firststepsces3>`
 
 
 .. _download_web_src:
