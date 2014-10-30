@@ -30,7 +30,7 @@ The last format available is oriented for developers or beta-testers. No officia
 Centreon Web
 ************
 
-Tarballs: `<http://www.centreon.com/Content-Download/donwload-centreon>`_
+Tarballs: `<http://www.centreon.com/Content-Download/download-centreon-stable-archive>`_
 
 git: `<http://git.centreon.com/centreon.git>`_
 
@@ -38,7 +38,7 @@ git: `<http://git.centreon.com/centreon.git>`_
 Centreon Engine
 ***************
 
-Tarballs: `<http://www.centreon.com/Content-Download/download-centreon-engine-centreon>`_
+Tarballs: `<http://www.centreon.com/Content-Download/download-centreon-engine>`_
 
 git: `<http://git.centreon.com/centreon-engine>`_
 
@@ -46,7 +46,7 @@ git: `<http://git.centreon.com/centreon-engine>`_
 Centreon Broker
 ***************
 
-Tarballs: `<http://www.centreon.com/Content-Download/download-centreon-broker-centreon>`_
+Tarballs: `<http://www.centreon.com/Content-Download/download-centreon-broker>`_
 
 git: `<http://git.centreon.com/centreon-broker.git>`_
 
