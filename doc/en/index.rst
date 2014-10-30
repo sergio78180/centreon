@@ -20,6 +20,7 @@ Contents:
    guide_exploitation/index
    architecture/index
    faq/index
+   extendcentreon/index
 
 Additional online resource:
 
