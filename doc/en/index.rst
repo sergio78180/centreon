@@ -18,6 +18,7 @@ Contents:
    upgrade/index
    user/index
    guide_exploitation/index
+   architecture/index
    faq/index
 
 Additional online resource:
