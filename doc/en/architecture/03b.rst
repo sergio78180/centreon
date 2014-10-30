@@ -6,7 +6,6 @@ Distributed architecture
 Description
 ***********
 
-
 The distributed architecture is to have two types of entities:
 
 * A central Centreon server to display information

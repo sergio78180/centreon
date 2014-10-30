@@ -6,7 +6,6 @@ Simple architecture
 Description
 ***********
 
-
 The simple architecture is to have all oversight entities within the same server, ie:
 
 * Centreon web interface

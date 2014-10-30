@@ -6,7 +6,6 @@ Distributed architecture with failover
 Description
 ***********
 
-
 The distributed architecture with remote DBMS is to have three types of entities:
 
 * A central Centreon server to display information
@@ -29,7 +28,7 @@ The remote servers include the following items:
 This architecture is used for:
 
 * Enable load balancing across multiple remote monitoring servers
-* Network streams isolation: if your monitoring architecture have to monitor a DMZ area, it is easier (and safe) to place a remote server in the DMZ network
+* Network streams isolation: if your monitoring architecture has to monitor a DMZ area, it is easier (and safe) to place a remote server in the DMZ network
 * Have a failover system: if the master centreon server is DOWN the other one allows to continue to display data.
 
 **********

@@ -6,7 +6,6 @@ Distributed architecture with remote DBMS
 Description
 ***********
 
-
 The distributed architecture with remote DBMS is to have three types of entities:
 
 * A central Centreon server to display information
