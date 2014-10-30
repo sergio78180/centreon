@@ -88,7 +88,6 @@ It is also possible to place the snmptrapd buffer folder in the RAM. For this, a
 
 .. _configuration_advanced_centreontrapdforward:
 
-
 centreontrapdforward 
 ====================
 
@@ -104,6 +103,8 @@ To change the buffer folder towards which the information will be written, chang
 You can also map the folder in the RAM, by adding the following line in the file: **/etc/fstab**::
 
         tmpfs /var/spool/centreontrapd            tmpfs defaults,size=512m 0 0
+
+.. _configuration_advanced_centreontrapd:
 
 centreontrapd 
 =============
@@ -218,6 +219,8 @@ Within centreon, the root OIDs of the SNMP traps is filed by manufacturer. To ad
 
 * The **Name** and **Alias** fields define the name and the alias of the manufacturer
 * The **Description** field provides an indication about the manufacturer
+
+.. _configuration_advanced_snmptrapds_mibimport:
 
 Importation of MIBs
 ===================
