@@ -244,7 +244,7 @@ It is also possible to import OIDs from MIBs provided by the manufacturers. To d
 .. note::
   The dependencies of the MIBS that you import must be present in the folder **/usr/share/snmp/mibs**. Once the import is completed, delete the dependences previously copied.
 .. note::
-  Once the SNMP traps are imported, it is necessary to verify the “Supervision” status associated with the events. By default it will be “OK”.
+  Once the SNMP traps are imported, it is necessary to verify the “Monitoring” status associated with the events. By default it will be “OK”.
 
 Manual configuration of traps 
 =============================

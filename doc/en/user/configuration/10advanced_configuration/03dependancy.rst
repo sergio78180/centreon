@@ -37,7 +37,7 @@ It is possible of define two settings:
 
 In the situation where family relationships have been defined between hosts supervised by different schedulers, it is possible:
 
-* To prevent the establishment of a parental relationship, when changing the host form, between two hosts supervised by two different collectors.
+* To prevent the establishment of a parental relationship, when changing the host form, between two hosts monitored by two different pollers.
 * To authorise the establishment of this parental relationship. In this case the dependencies will not be managed by the Monitoring engine engines but by the Centreon Broker which will take into account this relationship in its correlation engine.
 
 To prevent the establishment of this parental relationship, it is necessary to check **Enable strict mode for host parentship management** box in the menu: **Administration ==> Options**.
@@ -50,7 +50,8 @@ Conversely, if this box is not checked the parental links between hosts belongin
 Logical dependencies
 ********************
 
-Logical dependencies consist of installing logical links between multiple objects that may or not be of different types. E.g.: a service is in charge of supervising the access to a web page requiring an authentication based on a LDAP. It is logical that if the LDAP server is down, the access to the web page will be difficult or even impossible. In this situation, the notification issued should only be communicated to the LDAP directory and not to the website.
+Logical dependencies consist of installing logical links between multiple objects that may or not be of different types. 
+E.g.: a service is in charge of supervising the access to a web page requiring an authentication based on a LDAP. It is logical that if the LDAP server is down, the access to the web page will be difficult or even impossible. In this situation, the notification issued should only be communicated to the LDAP directory and not to the website.
 
 Hosts 
 =====

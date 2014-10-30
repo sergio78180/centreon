@@ -6,7 +6,7 @@ Graphs
 Definition
 **********
 
-Centreon can be used to generate graphs from supervision information. There are two types of graph:
+Centreon can be used to generate graphs from monitoring information. There are two types of graph:
 
 * Performance graphs serve to view the evolution of services intuitively. E.g.: filling level of a hard disc, network traffic, etc.
 * History graphs (or status graphs) serve to view the evolution of the statuses of a service.

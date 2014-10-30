@@ -131,8 +131,8 @@ The left menu can be used to change the hosts visible in the table:
 .. image:: /images/user/monitoring/04hostgroup.png
    :align: center 
 
-Host' tables
-============
+Host tables
+===========
 
 The table below gives a description of all the columns of the table displayed when viewing hosts:
 
@@ -310,7 +310,7 @@ To view the status of hosts, go into the menu **Supervision** ==> **Services**.
 The grey search bar can be used to filter the result displays.
 The left menu can be used to change the hosts visible in the table:
 
-* To view the services' problems but not acknowledged, click on **Unhandled Problems**
+* To view the services problems but not acknowledged, click on **Unhandled Problems**
 * To view all the services in non-OK status, click on **Services Problems**
 * To view all the services, click on **All Services**
 

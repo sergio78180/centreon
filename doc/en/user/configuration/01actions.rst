@@ -15,9 +15,11 @@ To delete an object :
 #.	Select the object(s) that you want to delete by checking the box(s) next to its name.
 #.	In the **More actions...** menu click on **Delete**.
 
-**Caution** : Deletion of an object is final. If you delete an object by accident, you will need to re-create it.
-In the same way, deletion of an object automatically deletes all the objects linked to it and which cannot live without it.
-E.g.: Deletion of a host results in the deletion of all the services associated with this host.
+
+.. warning::
+   Deletion of an object is final. If you delete an object by accident, you will need to re-create it.
+   In the same way, deletion of an object automatically deletes all the objects linked to it and which cannot live without it.
+   E.g.: Deletion of a host results in the deletion of all the services associated with this host.
 
 To modify an object, click on its name.
 

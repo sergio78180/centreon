@@ -131,7 +131,6 @@ Centreon is compatible with the following software:
 
 * :ref:`Centreon Engine <centreon-engine:user_installation_using_sources>`
 * `Nagios <http://nagios.sourceforge.net/docs/3_0/quickstart.html>`_
-* `Icinga <http://docs.icinga.org/latest/en/>`_
 
 Install one of these engines before continuing with the installation. Don’t forget to install the `Nagios plugins <http://nagios.sourceforge.net/docs/3_0/quickstart.html>`_.
 
@@ -807,7 +806,7 @@ You should see the following page:
 .. image:: /_static/images/installation/setup_1.png
    :align: center
 
-Click on the Next button:
+Click on the **Next** button:
 
 .. image:: /_static/images/installation/setup_2.png
    :align: center
@@ -846,7 +845,7 @@ For NDOUtils:
 .. image:: /_static/images/installation/setup_4_3.png
    :align: center
 
-Click on the ``Next`` button when all parameters are filled.
+Click on the **Next** button when all parameters are filled.
 
 .. image:: /_static/images/installation/setup_5.png
    :align: center
@@ -868,7 +867,7 @@ The database structure will be installed during this process. All must be valida
 
  The installation process may ask you to change the settings of the MySQL server to **add innodb_file_per_table=1** in the configuration file.
 
-Click on the ``Next`` button.
+Click on the **Next** button.
 
 .. image:: /_static/images/installation/setup_8.png
    :align: center

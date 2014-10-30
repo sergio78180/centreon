@@ -43,7 +43,7 @@ To add a category of services:
  
 * The **Name** and **Description** fields define the name and the description of the category of service.
 * if a service template is added to **Service Template Descriptions** list all the services which inherit from this Model belong to this category. 
-* The Is of criticality type box signifies that the category of service has a criticality level.
+* The **Severity type** box signifies that the category of service has a criticality level.
 * The **Level** and **Icon** fields define a criticality level and an associated icon respectively.
 * The **Status** field allows us to enable or disable the category of services.
 

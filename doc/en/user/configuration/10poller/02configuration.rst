@@ -18,7 +18,7 @@ Now, it is necessary to generate a configuration file for Centreon Engine:
 
 1. Go into the menu: **Configuration** ==> **Monitoring Engines**
 2. In the left menu, click on **main.cfg**
-3. Duplicate the configuration file of the **Central** collector and change it
+3. Duplicate the configuration file of the **Central** poller and change it
 4. Change the following settings, and save:
 
 *	Change the name of the **Configuration Name**.

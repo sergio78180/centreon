@@ -64,25 +64,29 @@ Prerequisites
 
 The table below gives the prerequisites for the installation of CES 3.0:
 
-+------------------------+--------------------------+----------------+-----------------+-------------+---------------+
-|  Number of Services    |  Number of pollers       | Central CPU    | Central memory  | Poller CPU  | Poller memory |
-+========================+==========================+================+=================+=============+===============+
-|        < 500           |        1 central         |    1 * 2,5 Ghz |  1 Go           |             |               |
-+------------------------+--------------------------+----------------+-----------------+-------------+---------------+
-|      500 - 1000        |        1 central         |    2 * 2,5 Ghz |  2 Go           |             |               |
-+------------------------+--------------------------+----------------+-----------------+-------------+---------------+
-|      1000 - 2000       |        1 central         |  4 * 2,5 Ghz   |  4 Go           |             |               |
-+------------------------+--------------------------+----------------+-----------------+-------------+---------------+
-|      2000 - 5000       |        1 central         |  8 * 2,5 Ghz   |  8 Go           |             |               |
-+------------------------+--------------------------+----------------+-----------------+-------------+---------------+
-|      5000 - 10000      | 1 central + 1 poller     |  4 * 2,5 Ghz   |  8 Go           | 8 * 2,5 Ghz | 4 Go          |
-+------------------------+--------------------------+----------------+-----------------+-------------+---------------+
-|     10000 - 25000      | 1 central + 1 poller     |  4 * 2,5 Ghz   |  8 Go           | 8 * 2,5 Ghz | 4 Go          |
-+------------------------+--------------------------+----------------+-----------------+-------------+---------------+
++------------------------+--------------------------+----------------+---------------+
+|  Number of Services    |  Number of pollers       | Central        | Poller        |
++========================+==========================+================+===============+
+|        < 500           |        1 central         |  1 vCPU / 1 Go |               |
++------------------------+--------------------------+----------------+---------------+
+|       500 - 2000       |        1 central         |  2 vCPU / 2 Go |               |
++------------------------+--------------------------+----------------+---------------+
+|      2000 - 10000      | 1 central + 1 poller     |  4 vCPU / 4 Go | 1 vCPU / 2 Go |
++------------------------+--------------------------+----------------+---------------+
+|      10000 - 20000     |  1 central + 1 poller    |  4 vCPU / 8 Go | 2 vCPU / 2 Go |
++------------------------+--------------------------+----------------+---------------+
+|      20000 - 50000     | 1 central + 2 pollers    |  4 vCPU / 8 Go | 4 vCPU / 2 Go |
++------------------------+--------------------------+----------------+---------------+
+|     50000 - 100000     | 1 central + 3 pollers    |  4 vCPU / 8 Go | 4 vCPU / 2 Go |
++------------------------+--------------------------+----------------+---------------+
 
 .. note::
 
  This information is based on the assumption that all optimisations have been performed for Centreon Engine, that the transactions have been enabled in Centreon Broker and that the optimisations have been performed for MariaDB.
+
+ If not virtualized architecture, a minimum CPU frequency of 2.5 GHz is recommended.
+
+ Central server load depends on the number of simultaneous users, the content of pages visited and the refresh rate of the pages. Our studies were performed with 15 simultaneous users on the monitoring page and with 60 s of cooling. 
 
 ************
 Installation
@@ -92,7 +96,6 @@ Step 1 : Start
 ==============
 
 To install Centreon, start your server on the support (created from the ISO file) of the Centreon Enterprise Server.
-
 Start with the **Install or upgrade an existing system** option
 
 .. image :: /images/user/abootmenu.png

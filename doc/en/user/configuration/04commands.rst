@@ -31,7 +31,7 @@ Before adding a command:
 .. image :: /images/user/configuration/04leftmenu.png
       :align: center
  
-2.      Click on Add
+2.      Click on **Add**
 
 .. image :: /images/user/configuration/04command.png
       :align: center

@@ -119,7 +119,7 @@ Detachment of a service
 If a service is linked to several hosts, it will be identical for each one of them. Hence it will not be possible to modify the service of one host individually to change a property. This why it is possible to convert this service linked to multiple hosts into a single service for each host:
 
 #.      In the list of services, select the service linked to multiple hosts (this service is usually highlighted in orange)
-#.      In the more actions....  menu click on Detach and confirm
+#.      In the **more actions....**  menu click on **Detach** and confirm
 
 There is now a single service per host.
 

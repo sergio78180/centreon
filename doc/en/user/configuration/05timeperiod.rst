@@ -24,7 +24,7 @@ Basic options
 
 * The **Time period name** and **Alias** fields define the name and description of the time period respectively.
 * The fields belonging to the **Time range** sub-category define the days of the week for which it is necessary to define time periods.
-* The **Eexceptions** table enables us to include days excluded from the time period.
+* The **Exceptions** table enables us to include days excluded from the time period.
 
 Syntax of a time period
 =======================

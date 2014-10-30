@@ -11,7 +11,7 @@ A macro always starts and finishes by the “$” sign.
 Standard macros
 ***************
 
-Standard macros are macros predefined in the source code of the Network supervisor engines. These different macros allow us to retrieve the value of various objects from commands.
+Standard macros are macros predefined in the source code of the monitoring engines. These different macros allow us to retrieve the value of various objects from commands.
 
 E.g.:
 * The macro called **$HOSTADDRESS$** enables us to retrieve the IP address of a host
@@ -65,7 +65,7 @@ The **Community SNMP & Version** fields in a host form automatically generates t
 Resource macros
 ***************
 
-Macros of resources are global macros that are used by the Network supervisor engine. These macros can be invoked by any type of command. They come in the form: $USERn$ where ‘n’ lies between 1 and 256.
+Macros of resources are global macros that are used by the monitoring engine. These macros can be invoked by any type of command. They come in the form: $USERn$ where ‘n’ lies between 1 and 256.
 
 In general, these macros are used to make reference to paths containing supervision probes. By default the $USER1$ macro is created, and its value is the following: /usr/lib/nagios/plugins.
 
@@ -99,5 +99,5 @@ The complete documentation on macros “on demand” is available at this addres
    The use of these macros is not recommended because the search for a value of a setting of an object from another object is a consumer in terms of resources.
 
 .. warning:: 
-   The enabling of the setting **Enabling optimisations of large installations** makes it impossible to use environment macros.
+   The enabling of the setting **Use large installation tweaks** makes it impossible to use environment macros.
 

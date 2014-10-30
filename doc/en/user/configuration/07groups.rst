@@ -16,7 +16,7 @@ Host Groups
 To add  a host group:
 
 #. Go to the menu: **Configuration** ==> **Hosts**
-#. In the left menu, click on **Hostgroups**
+#. In the left menu, click on **Host Groups**
 #. Click on **Add**
 
 .. image:: /images/user/configuration/07hostgroup.png
