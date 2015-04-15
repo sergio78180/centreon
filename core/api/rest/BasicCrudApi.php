@@ -297,8 +297,6 @@ class BasicCrudApi extends Api
 
             // aaaa
             $this->sendJsonApiResponse($this->objectName, $object, $links);
-        } catch (MissingParameterException $ex) {
-            throw new BadRequestException($ex->getMessage(), $ex->getMessage());
         } catch (Exception $ex) {
             if ($ex->getMessage() === static::OBJ_NOT_EXIST) {
                 $this->router->response()->code(404);
@@ -338,9 +336,7 @@ class BasicCrudApi extends Api
     {
         // 
         $params = $this->getParams();
-        $apiResourceObjects = $params['data'];
-        
-        
+        $apiResourceObjects = json_decode($params['data'], true);
 
         try {
             $object = array();
@@ -350,15 +346,17 @@ class BasicCrudApi extends Api
                 if ($apiResourceObject['type'] == $this->objectName) {
                     unset($apiResourceObject['type']);
                     $idOfCreatedElement = $repository::create(
-                        $apiResourceObjects,
+                        $apiResourceObject,
                         'api',
                         $this->objectBaseUrl . '/update'
                     );
                     $object[] = $repository::load($idOfCreatedElement);
                 }
             }
-            
+
             $this->sendJsonApiResponse($this->objectName, $object);
+        } catch (MissingParameterException $ex) {
+            $this->router->response()->code(400);
         } catch (\PDOException $ex) {
             if ($ex->getCode() == 23000) {
                 $this->router->response()->code(409);
