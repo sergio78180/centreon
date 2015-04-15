@@ -93,6 +93,7 @@ class Service extends CentreonBaseModel
         }
         if ($sqlFields && $sqlValues) {
             $sql .= "(".$sqlFields.") VALUES (".$sqlValues.")";
+            
             $stmt = $db->prepare($sql);
             $i = 1;
             foreach ($sqlParams as $v) {
@@ -100,6 +101,7 @@ class Service extends CentreonBaseModel
                 $i++;
             }
             $stmt->execute();
+            
             return $db->lastInsertId(static::$table, static::$primaryKey);
         }
         return null;

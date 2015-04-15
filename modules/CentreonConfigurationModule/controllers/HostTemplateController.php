@@ -42,6 +42,10 @@ use CentreonConfiguration\Repository\UserRepository;
 use Centreon\Controllers\FormController;
 use CentreonAdministration\Repository\TagsRepository;
 use CentreonConfiguration\Repository\CustomMacroRepository;
+use CentreonConfiguration\Models\Relation\Host\Service as HostServiceRelation;
+use CentreonConfiguration\Models\Relation\Hosttemplate\Hosttemplate;
+use CentreonConfiguration\Repository\ServiceRepository;
+use CentreonConfiguration\Models\Service;
 
 class HostTemplateController extends FormController
 {
@@ -134,7 +138,7 @@ class HostTemplateController extends FormController
     }
     
     /**
-     * Create a new host template
+     * Create a new host template\CentreonConfiguration\Models\Relation\Hosttemplate\
      *
      * @method post
      * @route /hosttemplate/add
@@ -210,7 +214,7 @@ class HostTemplateController extends FormController
         $macroList = array();
         $aTagList = array();
         $aTags = array();
-        
+                        
         if (isset($givenParameters['macro_name']) && isset($givenParameters['macro_value'])) {
             
             $macroName = $givenParameters['macro_name'];
@@ -235,8 +239,68 @@ class HostTemplateController extends FormController
         }
         
         parent::updateAction();
+       /*
         if ($givenParameters['host_create_services_from_template']) {
             \CentreonConfiguration\Models\Host::deployServices($givenParameters['object_id']);
+        }
+        */
+        
+        if (isset($givenParameters['hosttemplate_servicetemplates'])) {
+            
+            $aServicesToCreate = explode(",", $givenParameters['hosttemplate_servicetemplates']);           
+            $aServicesToCreate = array_filter($aServicesToCreate, 'strlen');
+            $aDatas = array();
+            $aServiceByHostAndHostTemplate = array();
+             
+            //load hosts rattached for this template
+            //A revoir ==> chain
+            $aHosts = Hosttemplate::getTargetIdFromSourceId('host_host_id', 'host_tpl_id', $givenParameters['object_id']);
+                        
+            //Loop to disable the old service rattached to host and host template
+            foreach ($aHosts as $hostId) {
+                //Load serice by host and host template
+                $aServiceByHostAndHostTemplate = HostServiceRelation::getServiceByHostAndHostTemplate($hostId, $givenParameters['object_id']);
+                
+                 echo "<pre>";
+            print_r($aServiceByHostAndHostTemplate);
+               
+               
+                
+                foreach ($aServiceByHostAndHostTemplate as $key => $value) {
+                    //HostServiceRelation::display($value['service_service_id']);
+                   // if (!in_array($value['service_service_id'], $aServicesToCreate)) {
+                        //HostServiceRelation::delete($value['service_service_id'], $hostId, $givenParameters['object_id']);
+                       // $aService = ServiceRepository::getListServiceByIdTempalte($value['service_service_id']);
+                       //  echo $value['service_service_id']."<pre>";
+                       // print_r($aService);
+                        //HostServiceRelation::display($value['service_service_id']);
+                    //}
+                }
+                
+            }
+             die;
+            //Loop to add the new service
+            foreach ($aHosts as $hostId) {
+                foreach ($aServicesToCreate as $iIdService) {
+                    
+                    $aService = ServiceRepository::getListServiceByIdTempalte($iIdService);
+   
+                    foreach ($aService as $key => $oService) {
+                        $serviceId = Service::insert(
+                            array(
+                                'service_description' => $oService['service_description'],
+                                'service_alias' => $oService['service_alias'],
+                                'service_template_model_stm_id' => $oService['service_id'],
+                                'service_register' => 1,
+                                'service_activate' => 1,
+                                'organization_id' => Di::getDefault()->get('organization')
+                            )
+                        );
+                        HostServiceRelation::insert($hostId, $serviceId, $givenParameters['object_id']);
+                    }
+                    
+                }
+            }                
         }
         
         if (count($macroList) > 0) {

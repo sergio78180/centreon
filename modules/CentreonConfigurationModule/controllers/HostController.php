@@ -194,8 +194,7 @@ class HostController extends FormController
         $givenParameters = $this->getParams('post');
         $macroList = array();
         $aTagList = array();
-        $aTags = array();
-        
+        $aTags = array();       
         if (isset($givenParameters['macro_name']) && isset($givenParameters['macro_value'])) {
             
             $macroName = $givenParameters['macro_name'];

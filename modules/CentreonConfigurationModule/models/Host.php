@@ -103,8 +103,7 @@ class Host extends CentreonBaseModel
             
             
             // Custom macros
-            
-            
+                
             
         }
         if ($sqlFields && $sqlValues) {
@@ -133,83 +132,41 @@ class Host extends CentreonBaseModel
         $aServices = array();
 
         $db = Di::getDefault()->get('db_centreon');
-        
+         
         //get host template
         $aHostTemplates = HostRepository::getTemplateChain($hostId);
-            foreach ($aHostTemplates as $oTemplate) {
+        
+        foreach ($aHostTemplates as $oTemplate) {
+            
             //get service template rattached to the host template
             $aServiceTemplate =  ServiceRepository::getListTemplatesByHostId($oTemplate['id']);
-           
+
             foreach ($aServiceTemplate as $oServiceTemplate) { 
                 $aService = ServiceRepository::getListServiceByIdTempalte($oServiceTemplate);
-/*
-                echo "<pre>aService";
-                print_r($aService);
-                echo "</pre>";
- * 
- */
-                foreach ($aService as $oService) {
-                    if (!empty($oService)) {
-                        $aServices[] = $oService;
-                    }
+                
+                foreach ($aService as $key => $oService) {
+                    
+                    $serviceId = Service::insert(
+                        array(
+                            'service_description' => $oService['service_description'],
+                            'service_alias'       => $oService['service_alias'],
+                            'service_template_model_stm_id' => $oService['service_id'],
+                            'service_register' => 1,
+                            'service_activate' => 1,
+                            'organization_id' => Di::getDefault()->get('organization')
+                        )
+                    );
+
+                    $aServices[] = array('svcId' => $serviceId, 'hostTplId' => $oTemplate['id']);
                 }
             }
+            
         }
-    //    echo $hostId;
-        
-    
-        
         $aServices =  array_unique($aServices);
 
-        foreach ($aServices as $serviceId) {
-            HostServiceRelation::insert($hostId, $serviceId);
+        foreach ($aServices as $key => $val) {
+            HostServiceRelation::insert($hostId, $val['svcId'], $val['hostTplId']);
         }
-        
-        
-        /*
-        $hid = is_null($hostTemplateId) ? $hostId : $hostTemplateId;
-        
-        $services = HostServiceRelation::getMergedParameters(
-            array(),
-            array('service_id', 'service_description', 'service_alias'),
-            -1,
-            0,
-            null,
-            'ASC',
-            array(
-                HostServiceRelation::getFirstKey() => $hid
-            ),
-            'AND'
-        );
-        
-        foreach ($services as $service) {
-            if (is_null($hostTemplateId)) {
-                $deployedServices[$hostId][$service['service_description']] =  true;
-            } elseif (!isset($deployedServices[$hostId][$service['service_alias']])) {
-                $serviceId = Service::insert(
-                    array(
-                        'service_description' => $service['service_alias'],
-                        'service_template_model_stm_id' => $service['service_id'],
-                        'service_register' => 1,
-                        'service_activate' => 1
-                    )
-                );
-                HostServiceRelation::insert($hostId, $serviceId);
-                $deployedServices[$hostId][$service['service_alias']] = true;
-            }
-        }
-        
-        $templates = HostHosttemplateRelation::getTargetIdFromSourceId(
-            'host_tpl_id',
-            'host_host_id',
-            $hid
-        );
-
-        foreach ($templates as $tplId) {
-            self::deployServices($hostId, $tplId);
-        }
-         
-         */
     }
     
     /**

@@ -213,7 +213,7 @@ class ServiceRepository extends Repository
             );
             $row = $stmt->fetchRow();
             if ($row["service_alias"]) {
-                return html_entity_decode(db2str($row["service_alias"]), ENT_QUOTES, "UTF-8");
+                return html_entity_decode(self::db2str($row["service_alias"]), ENT_QUOTES, "UTF-8");
             } elseif ($row["service_template_model_stm_id"]) {
                 if (isset($tab[$row['service_template_model_stm_id']])) {
                     break;
@@ -448,10 +448,18 @@ class ServiceRepository extends Repository
         $stmt = $dbconn->prepare($query);
         $stmt->bindParam(':id', $iHostId, \PDO::PARAM_INT);
         $stmt->execute();
+        /*
         if ($stmt->rowCount()) {
             $row = $stmt->fetch();
             $stmt->closeCursor();
             $svcTmpl[] = $row['service_service_id'];
+        }
+        */
+        if ($stmt->rowCount()) {
+            $rows = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+            foreach ($rows as $row) {
+                $svcTmpl[] = $row['service_service_id'];
+            }
         }
         return $svcTmpl;
     }
@@ -467,14 +475,18 @@ class ServiceRepository extends Repository
     {
         $dbconn = Di::getDefault()->get('db_centreon');
         $svcTmpl = array();
-        $query = "SELECT service_id FROM cfg_services WHERE service_register = '1' AND service_template_model_stm_id = :id";
+        $query = "SELECT service_id, service_description, service_alias FROM cfg_services WHERE service_register = '1' AND service_template_model_stm_id = :id";
         $stmt = $dbconn->prepare($query);
         $stmt->bindParam(':id', $svcId, \PDO::PARAM_INT);
         $stmt->execute();
         if ($stmt->rowCount()) {
             $row = $stmt->fetch();
             $stmt->closeCursor();
-            $svcTmpl[] = $row['service_id'];
+            $svcTmpl[$row['service_id']] = array(
+                'service_id' => $row['service_id'], 
+                'service_description' => $row['service_description'], 
+                'service_alias' => $row['service_alias']
+                );
         }
         return $svcTmpl;
     }

@@ -117,8 +117,81 @@ class Service extends CentreonRelationModel
             $db = Di::getDefault()->get('db_centreon');
             $sql = $db->limit($sql, $count, $offset);
         }
-        //echo $sql;
+        
         $result = static::getResult($sql, $filterTab);
         return $result;
+    }
+    
+    /**
+     * 
+     * @param int $iIdHost
+     * @param int $iIdService
+     * @return int
+     */
+    public static function isExistServiceIsHost($iIdHost, $iIdService)
+    {
+        $iNb = 0;
+        $sql = "SELECT count(*) as nb FROM ".static::$relationTable." "
+                . " WHERE ".static::$secondKey." = ".$iIdService." "
+                . " AND ".static::$firstKey." = ".$iIdHost;
+        
+        //echo $sql;
+        $result = static::getResult($sql);
+        if (isset($result[0]['nb'])) {
+            $iNb = $result[0]['nb'];
+        }
+        return $iNb;
+    }
+    /**
+     * 
+     * @param int $iIdHost
+     * @param int $iIdHostTemplate
+     * @return  array List of service ID
+     */
+    public static function getServiceByHostAndHostTemplate($iIdHost, $iIdHostTemplate)
+    {
+        if (empty($iIdHost) or empty($iIdHostTemplate)) {
+            return array();
+        }
+
+        $sql = "SELECT ".static::$secondKey."
+            FROM ". static::$relationTable." WHERE ".static::$relationTable.".".static::$firstKey ." = ". $iIdHost
+            ." AND host_template_id = ".$iIdHostTemplate;
+           
+        $result = static::getResult($sql);
+        return $result;
+    }
+    /**
+     * Method to insert relation
+     * host and hosttemplate and service
+     * @param type $firstKey
+     * @param type $secondKey
+     * @param type $thirdKey
+     */
+    public static function insert($firstKey, $secondKey, $thirdKey)
+    {
+        $db = Di::getDefault()->get('db_centreon');
+        
+        $sql = "INSERT INTO ".static::$relationTable
+            ." (".static::$firstKey.", ".static::$secondKey.", host_template_id) "
+            . "VALUES (?, ?, ?)";
+        $stmt = $db->prepare($sql);
+        $stmt->execute(array($firstKey, $secondKey, $thirdKey));
+    }
+    /**
+     * Method to display service
+     * @param int $firstKey
+     */  
+    public static function display($firstKey)
+    {
+        if (empty($firstKey))
+        {
+            return;
+        }
+        $db = Di::getDefault()->get('db_centreon');
+                
+        $sql = "UPDATE cfg_services SET service_activate = 0 WHERE service_id = ? ";
+        $stmt = $db->prepare($sql);
+        $stmt->execute(array($firstKey));
     }
 }

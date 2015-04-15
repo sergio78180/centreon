@@ -88,6 +88,7 @@ class Hosttemplate extends CentreonRelationModel
             $sourceId = array($sourceId);
         }
         $sql = "SELECT $targetKey FROM ".static::$relationTable." WHERE $sourceKey = ? ORDER BY `order`";
+
         $result = static::getResult($sql, $sourceId);
         $tab = array();
         foreach ($result as $rez) {
